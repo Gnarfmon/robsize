@@ -216,7 +216,7 @@ int add_filler(unsigned char* ibuf, int instr, int i, int k)
         case 42: ADD_BYTE(0xc5); ADD_BYTE(0xed); ADD_BYTE(0x4a); ADD_BYTE(0xcb); break;  // kaddb k1, k2, k3
         case 43: ADD_BYTE(0xc4); ADD_BYTE(0xe1); ADD_BYTE(0xfd & ~(((i+1)&7)<<3)); ADD_BYTE(0x4a);
                  ADD_BYTE(0xc0 | (i&7)<<3 | ((i+1)&7)); break;  // kaddd kN, kN+1, kN+1
-	case 44: ADD_WORD(0xf30f); ADD_BYTE(0x2a); ADD_BYTE(0xc0 | ((i&7)<<3) | (i&7)); break; // cvtsi2sd xmm, xmm
+	case 44: ADD_BYTE(0xf2); ADD_BYTE(0x0f); ADD_BYTE(0x2a); ADD_BYTE(0xc0 | ((i&3)<<3) | (i&3)); break; // cvtsi2sd xmm, xmm
 
     }
 
