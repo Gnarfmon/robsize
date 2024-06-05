@@ -233,8 +233,9 @@ if args.allxticks:
 if (args.tick_interval):
     ax.xaxis.set_major_locator(plticker.MultipleLocator(base=args.tick_interval))
 
-if (args.xrotate):
-    plt.xticks(rotation=args.xrotate)
+"""if (args.xrotate):
+    plt.xticks(rotation=args.xrotate)"""
+plt.xticks(rotation=90)
 
 if args.ylabel:
     ax.set_ylabel(args.ylabel)
