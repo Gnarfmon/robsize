@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 CXXFLAGS = -Wall -g -Wextra -Wno-pointer-arith -O2 -pedantic -std=c++11
+=======
+CXXFLAGS = -g -Wall -Wextra -Wno-pointer-arith -O2 -pedantic -std=c++11
+>>>>>>> 9786af701ea609dde54ba334a00172790a68cbba
 
 .PHONY = write-gold
 
