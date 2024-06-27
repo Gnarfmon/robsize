@@ -5,1224 +5,1224 @@ asm.bin:     file format binary
 Disassembly of section .data:
 
 0000000000000000 <.data>:
-   0:	66 90                	xchg   ax,ax
-   2:	66 90                	xchg   ax,ax
-   4:	66 90                	xchg   ax,ax
-   6:	66 90                	xchg   ax,ax
-   8:	66 90                	xchg   ax,ax
-   a:	66 90                	xchg   ax,ax
-   c:	66 90                	xchg   ax,ax
-   e:	66 90                	xchg   ax,ax
-  10:	53                   	push   rbx
-  11:	55                   	push   rbp
-  12:	56                   	push   rsi
-  13:	57                   	push   rdi
-  14:	41 50                	push   r8
-  16:	41 51                	push   r9
-  18:	48 81 ec a4 6a 00 00 	sub    rsp,0x6aa4
-  1f:	45 31 c0             	xor    r8d,r8d
-  22:	4c 8d 0c 24          	lea    r9,[rsp]
-  26:	48 b9 01 00 00 00 00 	movabs rcx,0x1
-  2d:	00 00 00 
-  30:	48 ba 02 00 00 00 00 	movabs rdx,0x2
-  37:	00 00 00 
-  3a:	48 b8 00 20 00 00 00 	movabs rax,0x2000
-  41:	00 00 00 
-  44:	48 83 eb 00          	sub    rbx,0x0
-  48:	48 83 ed 00          	sub    rbp,0x0
-  4c:	48 83 ee 00          	sub    rsi,0x0
-  50:	48 83 ef 00          	sub    rdi,0x0
-  54:	49 83 e8 00          	sub    r8,0x0
-  58:	49 83 e9 00          	sub    r9,0x0
-  5c:	49 83 ea 00          	sub    r10,0x0
-  60:	49 83 eb 00          	sub    r11,0x0
-  64:	49 83 ec 00          	sub    r12,0x0
-  68:	49 83 ed 00          	sub    r13,0x0
-  6c:	49 83 ee 00          	sub    r14,0x0
-  70:	49 83 ef 00          	sub    r15,0x0
-  74:	90                   	nop
-  75:	90                   	nop
-  76:	90                   	nop
-  77:	90                   	nop
-  78:	90                   	nop
-  79:	90                   	nop
-  7a:	90                   	nop
-  7b:	90                   	nop
-  7c:	90                   	nop
-  7d:	90                   	nop
-  7e:	90                   	nop
-  7f:	90                   	nop
-  80:	48 8b 09             	mov    rcx,QWORD PTR [rcx]
-  83:	90                   	nop
-  84:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
-  88:	90                   	nop
-  89:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
-  8d:	90                   	nop
-  8e:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
-  92:	90                   	nop
-  93:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
-  97:	90                   	nop
-  98:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
-  9c:	90                   	nop
-  9d:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
-  a1:	90                   	nop
-  a2:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
-  a6:	90                   	nop
-  a7:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
-  ab:	90                   	nop
-  ac:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
-  b0:	90                   	nop
-  b1:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
-  b5:	90                   	nop
-  b6:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
-  ba:	90                   	nop
-  bb:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
-  bf:	90                   	nop
-  c0:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
-  c4:	90                   	nop
-  c5:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
-  c9:	90                   	nop
-  ca:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
-  ce:	90                   	nop
-  cf:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
-  d3:	90                   	nop
-  d4:	48 8b 12             	mov    rdx,QWORD PTR [rdx]
-  d7:	90                   	nop
-  d8:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
-  dc:	90                   	nop
-  dd:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
-  e1:	90                   	nop
-  e2:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
-  e6:	90                   	nop
-  e7:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
-  eb:	90                   	nop
-  ec:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
-  f0:	90                   	nop
-  f1:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
-  f5:	90                   	nop
-  f6:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
-  fa:	90                   	nop
-  fb:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
-  ff:	90                   	nop
- 100:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 104:	90                   	nop
- 105:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 109:	90                   	nop
- 10a:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 10e:	90                   	nop
- 10f:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 113:	90                   	nop
- 114:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 118:	90                   	nop
- 119:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 11d:	90                   	nop
- 11e:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 122:	90                   	nop
- 123:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 127:	90                   	nop
- 128:	48 8b 09             	mov    rcx,QWORD PTR [rcx]
- 12b:	90                   	nop
- 12c:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 130:	90                   	nop
- 131:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 135:	90                   	nop
- 136:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 13a:	90                   	nop
- 13b:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 13f:	90                   	nop
- 140:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 144:	90                   	nop
- 145:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 149:	90                   	nop
- 14a:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 14e:	90                   	nop
- 14f:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 153:	90                   	nop
- 154:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 158:	90                   	nop
- 159:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 15d:	90                   	nop
- 15e:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 162:	90                   	nop
- 163:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 167:	90                   	nop
- 168:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 16c:	90                   	nop
- 16d:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 171:	90                   	nop
- 172:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 176:	90                   	nop
- 177:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 17b:	90                   	nop
- 17c:	48 8b 12             	mov    rdx,QWORD PTR [rdx]
- 17f:	90                   	nop
- 180:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 184:	90                   	nop
- 185:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 189:	90                   	nop
- 18a:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 18e:	90                   	nop
- 18f:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 193:	90                   	nop
- 194:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 198:	90                   	nop
- 199:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 19d:	90                   	nop
- 19e:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 1a2:	90                   	nop
- 1a3:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 1a7:	90                   	nop
- 1a8:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 1ac:	90                   	nop
- 1ad:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 1b1:	90                   	nop
- 1b2:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 1b6:	90                   	nop
- 1b7:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 1bb:	90                   	nop
- 1bc:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 1c0:	90                   	nop
- 1c1:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 1c5:	90                   	nop
- 1c6:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 1ca:	90                   	nop
- 1cb:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 1cf:	90                   	nop
- 1d0:	48 8b 09             	mov    rcx,QWORD PTR [rcx]
- 1d3:	90                   	nop
- 1d4:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 1d8:	90                   	nop
- 1d9:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 1dd:	90                   	nop
- 1de:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 1e2:	90                   	nop
- 1e3:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 1e7:	90                   	nop
- 1e8:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 1ec:	90                   	nop
- 1ed:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 1f1:	90                   	nop
- 1f2:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 1f6:	90                   	nop
- 1f7:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 1fb:	90                   	nop
- 1fc:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 200:	90                   	nop
- 201:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 205:	90                   	nop
- 206:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 20a:	90                   	nop
- 20b:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 20f:	90                   	nop
- 210:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 214:	90                   	nop
- 215:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 219:	90                   	nop
- 21a:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 21e:	90                   	nop
- 21f:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 223:	90                   	nop
- 224:	48 8b 12             	mov    rdx,QWORD PTR [rdx]
- 227:	90                   	nop
- 228:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 22c:	90                   	nop
- 22d:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 231:	90                   	nop
- 232:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 236:	90                   	nop
- 237:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 23b:	90                   	nop
- 23c:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 240:	90                   	nop
- 241:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 245:	90                   	nop
- 246:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 24a:	90                   	nop
- 24b:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 24f:	90                   	nop
- 250:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 254:	90                   	nop
- 255:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 259:	90                   	nop
- 25a:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 25e:	90                   	nop
- 25f:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 263:	90                   	nop
- 264:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 268:	90                   	nop
- 269:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 26d:	90                   	nop
- 26e:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 272:	90                   	nop
- 273:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 277:	90                   	nop
- 278:	48 8b 09             	mov    rcx,QWORD PTR [rcx]
- 27b:	90                   	nop
- 27c:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 280:	90                   	nop
- 281:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 285:	90                   	nop
- 286:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 28a:	90                   	nop
- 28b:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 28f:	90                   	nop
- 290:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 294:	90                   	nop
- 295:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 299:	90                   	nop
- 29a:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 29e:	90                   	nop
- 29f:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 2a3:	90                   	nop
- 2a4:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 2a8:	90                   	nop
- 2a9:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 2ad:	90                   	nop
- 2ae:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 2b2:	90                   	nop
- 2b3:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 2b7:	90                   	nop
- 2b8:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 2bc:	90                   	nop
- 2bd:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 2c1:	90                   	nop
- 2c2:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 2c6:	90                   	nop
- 2c7:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 2cb:	90                   	nop
- 2cc:	48 8b 12             	mov    rdx,QWORD PTR [rdx]
- 2cf:	90                   	nop
- 2d0:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 2d4:	90                   	nop
- 2d5:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 2d9:	90                   	nop
- 2da:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 2de:	90                   	nop
- 2df:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 2e3:	90                   	nop
- 2e4:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 2e8:	90                   	nop
- 2e9:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 2ed:	90                   	nop
- 2ee:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 2f2:	90                   	nop
- 2f3:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 2f7:	90                   	nop
- 2f8:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 2fc:	90                   	nop
- 2fd:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 301:	90                   	nop
- 302:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 306:	90                   	nop
- 307:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 30b:	90                   	nop
- 30c:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 310:	90                   	nop
- 311:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 315:	90                   	nop
- 316:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 31a:	90                   	nop
- 31b:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 31f:	90                   	nop
- 320:	48 8b 09             	mov    rcx,QWORD PTR [rcx]
- 323:	90                   	nop
- 324:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 328:	90                   	nop
- 329:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 32d:	90                   	nop
- 32e:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 332:	90                   	nop
- 333:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 337:	90                   	nop
- 338:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 33c:	90                   	nop
- 33d:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 341:	90                   	nop
- 342:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 346:	90                   	nop
- 347:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 34b:	90                   	nop
- 34c:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 350:	90                   	nop
- 351:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 355:	90                   	nop
- 356:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 35a:	90                   	nop
- 35b:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 35f:	90                   	nop
- 360:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 364:	90                   	nop
- 365:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 369:	90                   	nop
- 36a:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 36e:	90                   	nop
- 36f:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 373:	90                   	nop
- 374:	48 8b 12             	mov    rdx,QWORD PTR [rdx]
- 377:	90                   	nop
- 378:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 37c:	90                   	nop
- 37d:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 381:	90                   	nop
- 382:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 386:	90                   	nop
- 387:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 38b:	90                   	nop
- 38c:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 390:	90                   	nop
- 391:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 395:	90                   	nop
- 396:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 39a:	90                   	nop
- 39b:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 39f:	90                   	nop
- 3a0:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 3a4:	90                   	nop
- 3a5:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 3a9:	90                   	nop
- 3aa:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 3ae:	90                   	nop
- 3af:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 3b3:	90                   	nop
- 3b4:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 3b8:	90                   	nop
- 3b9:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 3bd:	90                   	nop
- 3be:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 3c2:	90                   	nop
- 3c3:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 3c7:	90                   	nop
- 3c8:	48 8b 09             	mov    rcx,QWORD PTR [rcx]
- 3cb:	90                   	nop
- 3cc:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 3d0:	90                   	nop
- 3d1:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 3d5:	90                   	nop
- 3d6:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 3da:	90                   	nop
- 3db:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 3df:	90                   	nop
- 3e0:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 3e4:	90                   	nop
- 3e5:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 3e9:	90                   	nop
- 3ea:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 3ee:	90                   	nop
- 3ef:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 3f3:	90                   	nop
- 3f4:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 3f8:	90                   	nop
- 3f9:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 3fd:	90                   	nop
- 3fe:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 402:	90                   	nop
- 403:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 407:	90                   	nop
- 408:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 40c:	90                   	nop
- 40d:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 411:	90                   	nop
- 412:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 416:	90                   	nop
- 417:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 41b:	90                   	nop
- 41c:	48 8b 12             	mov    rdx,QWORD PTR [rdx]
- 41f:	90                   	nop
- 420:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 424:	90                   	nop
- 425:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 429:	90                   	nop
- 42a:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 42e:	90                   	nop
- 42f:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 433:	90                   	nop
- 434:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 438:	90                   	nop
- 439:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 43d:	90                   	nop
- 43e:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 442:	90                   	nop
- 443:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 447:	90                   	nop
- 448:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 44c:	90                   	nop
- 44d:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 451:	90                   	nop
- 452:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 456:	90                   	nop
- 457:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 45b:	90                   	nop
- 45c:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 460:	90                   	nop
- 461:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 465:	90                   	nop
- 466:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 46a:	90                   	nop
- 46b:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 46f:	90                   	nop
- 470:	48 8b 09             	mov    rcx,QWORD PTR [rcx]
- 473:	90                   	nop
- 474:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 478:	90                   	nop
- 479:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 47d:	90                   	nop
- 47e:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 482:	90                   	nop
- 483:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 487:	90                   	nop
- 488:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 48c:	90                   	nop
- 48d:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 491:	90                   	nop
- 492:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 496:	90                   	nop
- 497:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 49b:	90                   	nop
- 49c:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 4a0:	90                   	nop
- 4a1:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 4a5:	90                   	nop
- 4a6:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 4aa:	90                   	nop
- 4ab:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 4af:	90                   	nop
- 4b0:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 4b4:	90                   	nop
- 4b5:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 4b9:	90                   	nop
- 4ba:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 4be:	90                   	nop
- 4bf:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 4c3:	90                   	nop
- 4c4:	48 8b 12             	mov    rdx,QWORD PTR [rdx]
- 4c7:	90                   	nop
- 4c8:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 4cc:	90                   	nop
- 4cd:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 4d1:	90                   	nop
- 4d2:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 4d6:	90                   	nop
- 4d7:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 4db:	90                   	nop
- 4dc:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 4e0:	90                   	nop
- 4e1:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 4e5:	90                   	nop
- 4e6:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 4ea:	90                   	nop
- 4eb:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 4ef:	90                   	nop
- 4f0:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 4f4:	90                   	nop
- 4f5:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 4f9:	90                   	nop
- 4fa:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 4fe:	90                   	nop
- 4ff:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 503:	90                   	nop
- 504:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 508:	90                   	nop
- 509:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 50d:	90                   	nop
- 50e:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 512:	90                   	nop
- 513:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 517:	90                   	nop
- 518:	48 8b 09             	mov    rcx,QWORD PTR [rcx]
- 51b:	90                   	nop
- 51c:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 520:	90                   	nop
- 521:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 525:	90                   	nop
- 526:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 52a:	90                   	nop
- 52b:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 52f:	90                   	nop
- 530:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 534:	90                   	nop
- 535:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 539:	90                   	nop
- 53a:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 53e:	90                   	nop
- 53f:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 543:	90                   	nop
- 544:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 548:	90                   	nop
- 549:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 54d:	90                   	nop
- 54e:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 552:	90                   	nop
- 553:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 557:	90                   	nop
- 558:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 55c:	90                   	nop
- 55d:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 561:	90                   	nop
- 562:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 566:	90                   	nop
- 567:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 56b:	90                   	nop
- 56c:	48 8b 12             	mov    rdx,QWORD PTR [rdx]
- 56f:	90                   	nop
- 570:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 574:	90                   	nop
- 575:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 579:	90                   	nop
- 57a:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 57e:	90                   	nop
- 57f:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 583:	90                   	nop
- 584:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 588:	90                   	nop
- 589:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 58d:	90                   	nop
- 58e:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 592:	90                   	nop
- 593:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 597:	90                   	nop
- 598:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 59c:	90                   	nop
- 59d:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 5a1:	90                   	nop
- 5a2:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 5a6:	90                   	nop
- 5a7:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 5ab:	90                   	nop
- 5ac:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 5b0:	90                   	nop
- 5b1:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 5b5:	90                   	nop
- 5b6:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 5ba:	90                   	nop
- 5bb:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 5bf:	90                   	nop
- 5c0:	48 8b 09             	mov    rcx,QWORD PTR [rcx]
- 5c3:	90                   	nop
- 5c4:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 5c8:	90                   	nop
- 5c9:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 5cd:	90                   	nop
- 5ce:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 5d2:	90                   	nop
- 5d3:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 5d7:	90                   	nop
- 5d8:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 5dc:	90                   	nop
- 5dd:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 5e1:	90                   	nop
- 5e2:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 5e6:	90                   	nop
- 5e7:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 5eb:	90                   	nop
- 5ec:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 5f0:	90                   	nop
- 5f1:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 5f5:	90                   	nop
- 5f6:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 5fa:	90                   	nop
- 5fb:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 5ff:	90                   	nop
- 600:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 604:	90                   	nop
- 605:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 609:	90                   	nop
- 60a:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 60e:	90                   	nop
- 60f:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 613:	90                   	nop
- 614:	48 8b 12             	mov    rdx,QWORD PTR [rdx]
- 617:	90                   	nop
- 618:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 61c:	90                   	nop
- 61d:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 621:	90                   	nop
- 622:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 626:	90                   	nop
- 627:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 62b:	90                   	nop
- 62c:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 630:	90                   	nop
- 631:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 635:	90                   	nop
- 636:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 63a:	90                   	nop
- 63b:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 63f:	90                   	nop
- 640:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 644:	90                   	nop
- 645:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 649:	90                   	nop
- 64a:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 64e:	90                   	nop
- 64f:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 653:	90                   	nop
- 654:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 658:	90                   	nop
- 659:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 65d:	90                   	nop
- 65e:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 662:	90                   	nop
- 663:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 667:	90                   	nop
- 668:	48 8b 09             	mov    rcx,QWORD PTR [rcx]
- 66b:	90                   	nop
- 66c:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 670:	90                   	nop
- 671:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 675:	90                   	nop
- 676:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 67a:	90                   	nop
- 67b:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 67f:	90                   	nop
- 680:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 684:	90                   	nop
- 685:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 689:	90                   	nop
- 68a:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 68e:	90                   	nop
- 68f:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 693:	90                   	nop
- 694:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 698:	90                   	nop
- 699:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 69d:	90                   	nop
- 69e:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 6a2:	90                   	nop
- 6a3:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 6a7:	90                   	nop
- 6a8:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 6ac:	90                   	nop
- 6ad:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 6b1:	90                   	nop
- 6b2:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 6b6:	90                   	nop
- 6b7:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 6bb:	90                   	nop
- 6bc:	48 8b 12             	mov    rdx,QWORD PTR [rdx]
- 6bf:	90                   	nop
- 6c0:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 6c4:	90                   	nop
- 6c5:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 6c9:	90                   	nop
- 6ca:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 6ce:	90                   	nop
- 6cf:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 6d3:	90                   	nop
- 6d4:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 6d8:	90                   	nop
- 6d9:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 6dd:	90                   	nop
- 6de:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 6e2:	90                   	nop
- 6e3:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 6e7:	90                   	nop
- 6e8:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 6ec:	90                   	nop
- 6ed:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 6f1:	90                   	nop
- 6f2:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 6f6:	90                   	nop
- 6f7:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 6fb:	90                   	nop
- 6fc:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 700:	90                   	nop
- 701:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 705:	90                   	nop
- 706:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 70a:	90                   	nop
- 70b:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 70f:	90                   	nop
- 710:	48 8b 09             	mov    rcx,QWORD PTR [rcx]
- 713:	90                   	nop
- 714:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 718:	90                   	nop
- 719:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 71d:	90                   	nop
- 71e:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 722:	90                   	nop
- 723:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 727:	90                   	nop
- 728:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 72c:	90                   	nop
- 72d:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 731:	90                   	nop
- 732:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 736:	90                   	nop
- 737:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 73b:	90                   	nop
- 73c:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 740:	90                   	nop
- 741:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 745:	90                   	nop
- 746:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 74a:	90                   	nop
- 74b:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 74f:	90                   	nop
- 750:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 754:	90                   	nop
- 755:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 759:	90                   	nop
- 75a:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 75e:	90                   	nop
- 75f:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 763:	90                   	nop
- 764:	48 8b 12             	mov    rdx,QWORD PTR [rdx]
- 767:	90                   	nop
- 768:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 76c:	90                   	nop
- 76d:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 771:	90                   	nop
- 772:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 776:	90                   	nop
- 777:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 77b:	90                   	nop
- 77c:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 780:	90                   	nop
- 781:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 785:	90                   	nop
- 786:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 78a:	90                   	nop
- 78b:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 78f:	90                   	nop
- 790:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 794:	90                   	nop
- 795:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 799:	90                   	nop
- 79a:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 79e:	90                   	nop
- 79f:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 7a3:	90                   	nop
- 7a4:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 7a8:	90                   	nop
- 7a9:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 7ad:	90                   	nop
- 7ae:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 7b2:	90                   	nop
- 7b3:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 7b7:	90                   	nop
- 7b8:	48 8b 09             	mov    rcx,QWORD PTR [rcx]
- 7bb:	90                   	nop
- 7bc:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 7c0:	90                   	nop
- 7c1:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 7c5:	90                   	nop
- 7c6:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 7ca:	90                   	nop
- 7cb:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 7cf:	90                   	nop
- 7d0:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 7d4:	90                   	nop
- 7d5:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 7d9:	90                   	nop
- 7da:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 7de:	90                   	nop
- 7df:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 7e3:	90                   	nop
- 7e4:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 7e8:	90                   	nop
- 7e9:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 7ed:	90                   	nop
- 7ee:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 7f2:	90                   	nop
- 7f3:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 7f7:	90                   	nop
- 7f8:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 7fc:	90                   	nop
- 7fd:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 801:	90                   	nop
- 802:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 806:	90                   	nop
- 807:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 80b:	90                   	nop
- 80c:	48 8b 12             	mov    rdx,QWORD PTR [rdx]
- 80f:	90                   	nop
- 810:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 814:	90                   	nop
- 815:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 819:	90                   	nop
- 81a:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 81e:	90                   	nop
- 81f:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 823:	90                   	nop
- 824:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 828:	90                   	nop
- 829:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 82d:	90                   	nop
- 82e:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 832:	90                   	nop
- 833:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 837:	90                   	nop
- 838:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 83c:	90                   	nop
- 83d:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 841:	90                   	nop
- 842:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 846:	90                   	nop
- 847:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 84b:	90                   	nop
- 84c:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 850:	90                   	nop
- 851:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 855:	90                   	nop
- 856:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 85a:	90                   	nop
- 85b:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 85f:	90                   	nop
- 860:	48 8b 09             	mov    rcx,QWORD PTR [rcx]
- 863:	90                   	nop
- 864:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 868:	90                   	nop
- 869:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 86d:	90                   	nop
- 86e:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 872:	90                   	nop
- 873:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 877:	90                   	nop
- 878:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 87c:	90                   	nop
- 87d:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 881:	90                   	nop
- 882:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 886:	90                   	nop
- 887:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 88b:	90                   	nop
- 88c:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 890:	90                   	nop
- 891:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 895:	90                   	nop
- 896:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 89a:	90                   	nop
- 89b:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 89f:	90                   	nop
- 8a0:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 8a4:	90                   	nop
- 8a5:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 8a9:	90                   	nop
- 8aa:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 8ae:	90                   	nop
- 8af:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 8b3:	90                   	nop
- 8b4:	48 8b 12             	mov    rdx,QWORD PTR [rdx]
- 8b7:	90                   	nop
- 8b8:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 8bc:	90                   	nop
- 8bd:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 8c1:	90                   	nop
- 8c2:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 8c6:	90                   	nop
- 8c7:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 8cb:	90                   	nop
- 8cc:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 8d0:	90                   	nop
- 8d1:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 8d5:	90                   	nop
- 8d6:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 8da:	90                   	nop
- 8db:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 8df:	90                   	nop
- 8e0:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 8e4:	90                   	nop
- 8e5:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 8e9:	90                   	nop
- 8ea:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 8ee:	90                   	nop
- 8ef:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 8f3:	90                   	nop
- 8f4:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 8f8:	90                   	nop
- 8f9:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 8fd:	90                   	nop
- 8fe:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 902:	90                   	nop
- 903:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 907:	90                   	nop
- 908:	48 8b 09             	mov    rcx,QWORD PTR [rcx]
- 90b:	90                   	nop
- 90c:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 910:	90                   	nop
- 911:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 915:	90                   	nop
- 916:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 91a:	90                   	nop
- 91b:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 91f:	90                   	nop
- 920:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 924:	90                   	nop
- 925:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 929:	90                   	nop
- 92a:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 92e:	90                   	nop
- 92f:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 933:	90                   	nop
- 934:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 938:	90                   	nop
- 939:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 93d:	90                   	nop
- 93e:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 942:	90                   	nop
- 943:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 947:	90                   	nop
- 948:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 94c:	90                   	nop
- 94d:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 951:	90                   	nop
- 952:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 956:	90                   	nop
- 957:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 95b:	90                   	nop
- 95c:	48 8b 12             	mov    rdx,QWORD PTR [rdx]
- 95f:	90                   	nop
- 960:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 964:	90                   	nop
- 965:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 969:	90                   	nop
- 96a:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 96e:	90                   	nop
- 96f:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 973:	90                   	nop
- 974:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 978:	90                   	nop
- 979:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 97d:	90                   	nop
- 97e:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 982:	90                   	nop
- 983:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 987:	90                   	nop
- 988:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 98c:	90                   	nop
- 98d:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 991:	90                   	nop
- 992:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 996:	90                   	nop
- 997:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 99b:	90                   	nop
- 99c:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 9a0:	90                   	nop
- 9a1:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 9a5:	90                   	nop
- 9a6:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 9aa:	90                   	nop
- 9ab:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 9af:	90                   	nop
- 9b0:	48 8b 09             	mov    rcx,QWORD PTR [rcx]
- 9b3:	90                   	nop
- 9b4:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 9b8:	90                   	nop
- 9b9:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 9bd:	90                   	nop
- 9be:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 9c2:	90                   	nop
- 9c3:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 9c7:	90                   	nop
- 9c8:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 9cc:	90                   	nop
- 9cd:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 9d1:	90                   	nop
- 9d2:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 9d6:	90                   	nop
- 9d7:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 9db:	90                   	nop
- 9dc:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 9e0:	90                   	nop
- 9e1:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 9e5:	90                   	nop
- 9e6:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 9ea:	90                   	nop
- 9eb:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 9ef:	90                   	nop
- 9f0:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 9f4:	90                   	nop
- 9f5:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- 9f9:	90                   	nop
- 9fa:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- 9fe:	90                   	nop
- 9ff:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- a03:	90                   	nop
- a04:	48 8b 12             	mov    rdx,QWORD PTR [rdx]
- a07:	90                   	nop
- a08:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- a0c:	90                   	nop
- a0d:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- a11:	90                   	nop
- a12:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- a16:	90                   	nop
- a17:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- a1b:	90                   	nop
- a1c:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- a20:	90                   	nop
- a21:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- a25:	90                   	nop
- a26:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- a2a:	90                   	nop
- a2b:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- a2f:	90                   	nop
- a30:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- a34:	90                   	nop
- a35:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- a39:	90                   	nop
- a3a:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- a3e:	90                   	nop
- a3f:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- a43:	90                   	nop
- a44:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- a48:	90                   	nop
- a49:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- a4d:	90                   	nop
- a4e:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- a52:	90                   	nop
- a53:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- a57:	90                   	nop
- a58:	48 8b 09             	mov    rcx,QWORD PTR [rcx]
- a5b:	90                   	nop
- a5c:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- a60:	90                   	nop
- a61:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- a65:	90                   	nop
- a66:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- a6a:	90                   	nop
- a6b:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- a6f:	90                   	nop
- a70:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- a74:	90                   	nop
- a75:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- a79:	90                   	nop
- a7a:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- a7e:	90                   	nop
- a7f:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- a83:	90                   	nop
- a84:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- a88:	90                   	nop
- a89:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- a8d:	90                   	nop
- a8e:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- a92:	90                   	nop
- a93:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- a97:	90                   	nop
- a98:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- a9c:	90                   	nop
- a9d:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- aa1:	90                   	nop
- aa2:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- aa6:	90                   	nop
- aa7:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- aab:	90                   	nop
- aac:	48 8b 12             	mov    rdx,QWORD PTR [rdx]
- aaf:	90                   	nop
- ab0:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- ab4:	90                   	nop
- ab5:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- ab9:	90                   	nop
- aba:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- abe:	90                   	nop
- abf:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- ac3:	90                   	nop
- ac4:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- ac8:	90                   	nop
- ac9:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- acd:	90                   	nop
- ace:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- ad2:	90                   	nop
- ad3:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- ad7:	90                   	nop
- ad8:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- adc:	90                   	nop
- add:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- ae1:	90                   	nop
- ae2:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- ae6:	90                   	nop
- ae7:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- aeb:	90                   	nop
- aec:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- af0:	90                   	nop
- af1:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- af5:	90                   	nop
- af6:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- afa:	90                   	nop
- afb:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- aff:	90                   	nop
- b00:	48 8b 09             	mov    rcx,QWORD PTR [rcx]
- b03:	90                   	nop
- b04:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- b08:	90                   	nop
- b09:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- b0d:	90                   	nop
- b0e:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- b12:	90                   	nop
- b13:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- b17:	90                   	nop
- b18:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- b1c:	90                   	nop
- b1d:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- b21:	90                   	nop
- b22:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- b26:	90                   	nop
- b27:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- b2b:	90                   	nop
- b2c:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- b30:	90                   	nop
- b31:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- b35:	90                   	nop
- b36:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- b3a:	90                   	nop
- b3b:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- b3f:	90                   	nop
- b40:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- b44:	90                   	nop
- b45:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- b49:	90                   	nop
- b4a:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- b4e:	90                   	nop
- b4f:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- b53:	90                   	nop
- b54:	48 8b 12             	mov    rdx,QWORD PTR [rdx]
- b57:	90                   	nop
- b58:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- b5c:	90                   	nop
- b5d:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- b61:	90                   	nop
- b62:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- b66:	90                   	nop
- b67:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- b6b:	90                   	nop
- b6c:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- b70:	90                   	nop
- b71:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- b75:	90                   	nop
- b76:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- b7a:	90                   	nop
- b7b:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- b7f:	90                   	nop
- b80:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- b84:	90                   	nop
- b85:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- b89:	90                   	nop
- b8a:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- b8e:	90                   	nop
- b8f:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- b93:	90                   	nop
- b94:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- b98:	90                   	nop
- b99:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- b9d:	90                   	nop
- b9e:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
- ba2:	90                   	nop
- ba3:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
- ba7:	83 e8 01             	sub    eax,0x1
- baa:	0f 85 d0 f4 ff ff    	jne    0x80
- bb0:	66 90                	xchg   ax,ax
- bb2:	66 90                	xchg   ax,ax
- bb4:	66 90                	xchg   ax,ax
- bb6:	66 90                	xchg   ax,ax
- bb8:	66 90                	xchg   ax,ax
- bba:	66 90                	xchg   ax,ax
- bbc:	66 90                	xchg   ax,ax
- bbe:	66 90                	xchg   ax,ax
- bc0:	48 81 c4 a4 6a 00 00 	add    rsp,0x6aa4
- bc7:	41 59                	pop    r9
- bc9:	41 58                	pop    r8
- bcb:	5f                   	pop    rdi
- bcc:	5e                   	pop    rsi
- bcd:	5d                   	pop    rbp
- bce:	5b                   	pop    rbx
- bcf:	0f 77                	emms   
- bd1:	c3                   	ret    
+       0:	66 90                	xchg   ax,ax
+       2:	66 90                	xchg   ax,ax
+       4:	66 90                	xchg   ax,ax
+       6:	66 90                	xchg   ax,ax
+       8:	66 90                	xchg   ax,ax
+       a:	66 90                	xchg   ax,ax
+       c:	66 90                	xchg   ax,ax
+       e:	66 90                	xchg   ax,ax
+      10:	53                   	push   rbx
+      11:	55                   	push   rbp
+      12:	56                   	push   rsi
+      13:	57                   	push   rdi
+      14:	41 50                	push   r8
+      16:	41 51                	push   r9
+      18:	48 81 ec a4 6a 00 00 	sub    rsp,0x6aa4
+      1f:	45 31 c0             	xor    r8d,r8d
+      22:	4c 8d 0c 24          	lea    r9,[rsp]
+      26:	48 b9 01 00 00 00 00 	movabs rcx,0x1
+      2d:	00 00 00 
+      30:	48 ba 02 00 00 00 00 	movabs rdx,0x2
+      37:	00 00 00 
+      3a:	48 b8 00 20 00 00 00 	movabs rax,0x2000
+      41:	00 00 00 
+      44:	48 83 eb 00          	sub    rbx,0x0
+      48:	48 83 ed 00          	sub    rbp,0x0
+      4c:	48 83 ee 00          	sub    rsi,0x0
+      50:	48 83 ef 00          	sub    rdi,0x0
+      54:	49 83 e8 00          	sub    r8,0x0
+      58:	49 83 e9 00          	sub    r9,0x0
+      5c:	49 83 ea 00          	sub    r10,0x0
+      60:	49 83 eb 00          	sub    r11,0x0
+      64:	49 83 ec 00          	sub    r12,0x0
+      68:	49 83 ed 00          	sub    r13,0x0
+      6c:	49 83 ee 00          	sub    r14,0x0
+      70:	49 83 ef 00          	sub    r15,0x0
+      74:	90                   	nop
+      75:	90                   	nop
+      76:	90                   	nop
+      77:	90                   	nop
+      78:	90                   	nop
+      79:	90                   	nop
+      7a:	90                   	nop
+      7b:	90                   	nop
+      7c:	90                   	nop
+      7d:	90                   	nop
+      7e:	90                   	nop
+      7f:	90                   	nop
+      80:	48 8b 09             	mov    rcx,QWORD PTR [rcx]
+      83:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+      87:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+      8b:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+      8f:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+      93:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+      97:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+      9b:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+      9f:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+      a3:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+      a7:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+      ab:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+      af:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+      b3:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+      b7:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+      bb:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+      bf:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+      c3:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+      c7:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+      cb:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+      cf:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+      d3:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+      d7:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+      db:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+      df:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+      e3:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+      e7:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+      eb:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+      ef:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+      f3:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+      f7:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+      fb:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+      ff:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     103:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     107:	48 8b 12             	mov    rdx,QWORD PTR [rdx]
+     10a:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     10e:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     112:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     116:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     11a:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     11e:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     122:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     126:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     12a:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     12e:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     132:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     136:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     13a:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     13e:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     142:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     146:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     14a:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     14e:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     152:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     156:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     15a:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     15e:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     162:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     166:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     16a:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     16e:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     172:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     176:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     17a:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     17e:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     182:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     186:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     18a:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     18e:	48 8b 09             	mov    rcx,QWORD PTR [rcx]
+     191:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     195:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     199:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     19d:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     1a1:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     1a5:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     1a9:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     1ad:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     1b1:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     1b5:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     1b9:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     1bd:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     1c1:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     1c5:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     1c9:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     1cd:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     1d1:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     1d5:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     1d9:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     1dd:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     1e1:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     1e5:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     1e9:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     1ed:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     1f1:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     1f5:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     1f9:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     1fd:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     201:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     205:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     209:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     20d:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     211:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     215:	48 8b 12             	mov    rdx,QWORD PTR [rdx]
+     218:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     21c:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     220:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     224:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     228:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     22c:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     230:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     234:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     238:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     23c:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     240:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     244:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     248:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     24c:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     250:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     254:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     258:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     25c:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     260:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     264:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     268:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     26c:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     270:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     274:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     278:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     27c:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     280:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     284:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     288:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     28c:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     290:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     294:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     298:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     29c:	48 8b 09             	mov    rcx,QWORD PTR [rcx]
+     29f:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     2a3:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     2a7:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     2ab:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     2af:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     2b3:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     2b7:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     2bb:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     2bf:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     2c3:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     2c7:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     2cb:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     2cf:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     2d3:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     2d7:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     2db:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     2df:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     2e3:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     2e7:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     2eb:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     2ef:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     2f3:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     2f7:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     2fb:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     2ff:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     303:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     307:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     30b:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     30f:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     313:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     317:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     31b:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     31f:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     323:	48 8b 12             	mov    rdx,QWORD PTR [rdx]
+     326:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     32a:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     32e:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     332:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     336:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     33a:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     33e:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     342:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     346:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     34a:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     34e:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     352:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     356:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     35a:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     35e:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     362:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     366:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     36a:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     36e:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     372:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     376:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     37a:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     37e:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     382:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     386:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     38a:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     38e:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     392:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     396:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     39a:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     39e:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     3a2:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     3a6:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     3aa:	48 8b 09             	mov    rcx,QWORD PTR [rcx]
+     3ad:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     3b1:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     3b5:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     3b9:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     3bd:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     3c1:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     3c5:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     3c9:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     3cd:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     3d1:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     3d5:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     3d9:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     3dd:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     3e1:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     3e5:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     3e9:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     3ed:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     3f1:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     3f5:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     3f9:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     3fd:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     401:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     405:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     409:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     40d:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     411:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     415:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     419:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     41d:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     421:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     425:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     429:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     42d:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     431:	48 8b 12             	mov    rdx,QWORD PTR [rdx]
+     434:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     438:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     43c:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     440:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     444:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     448:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     44c:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     450:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     454:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     458:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     45c:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     460:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     464:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     468:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     46c:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     470:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     474:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     478:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     47c:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     480:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     484:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     488:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     48c:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     490:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     494:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     498:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     49c:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     4a0:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     4a4:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     4a8:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     4ac:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     4b0:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     4b4:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     4b8:	48 8b 09             	mov    rcx,QWORD PTR [rcx]
+     4bb:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     4bf:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     4c3:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     4c7:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     4cb:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     4cf:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     4d3:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     4d7:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     4db:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     4df:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     4e3:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     4e7:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     4eb:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     4ef:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     4f3:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     4f7:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     4fb:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     4ff:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     503:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     507:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     50b:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     50f:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     513:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     517:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     51b:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     51f:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     523:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     527:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     52b:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     52f:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     533:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     537:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     53b:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     53f:	48 8b 12             	mov    rdx,QWORD PTR [rdx]
+     542:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     546:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     54a:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     54e:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     552:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     556:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     55a:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     55e:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     562:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     566:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     56a:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     56e:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     572:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     576:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     57a:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     57e:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     582:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     586:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     58a:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     58e:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     592:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     596:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     59a:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     59e:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     5a2:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     5a6:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     5aa:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     5ae:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     5b2:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     5b6:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     5ba:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     5be:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     5c2:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     5c6:	48 8b 09             	mov    rcx,QWORD PTR [rcx]
+     5c9:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     5cd:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     5d1:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     5d5:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     5d9:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     5dd:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     5e1:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     5e5:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     5e9:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     5ed:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     5f1:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     5f5:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     5f9:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     5fd:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     601:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     605:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     609:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     60d:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     611:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     615:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     619:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     61d:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     621:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     625:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     629:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     62d:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     631:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     635:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     639:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     63d:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     641:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     645:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     649:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     64d:	48 8b 12             	mov    rdx,QWORD PTR [rdx]
+     650:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     654:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     658:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     65c:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     660:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     664:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     668:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     66c:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     670:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     674:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     678:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     67c:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     680:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     684:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     688:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     68c:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     690:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     694:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     698:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     69c:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     6a0:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     6a4:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     6a8:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     6ac:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     6b0:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     6b4:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     6b8:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     6bc:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     6c0:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     6c4:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     6c8:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     6cc:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     6d0:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     6d4:	48 8b 09             	mov    rcx,QWORD PTR [rcx]
+     6d7:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     6db:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     6df:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     6e3:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     6e7:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     6eb:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     6ef:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     6f3:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     6f7:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     6fb:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     6ff:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     703:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     707:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     70b:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     70f:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     713:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     717:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     71b:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     71f:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     723:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     727:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     72b:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     72f:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     733:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     737:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     73b:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     73f:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     743:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     747:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     74b:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     74f:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     753:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     757:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     75b:	48 8b 12             	mov    rdx,QWORD PTR [rdx]
+     75e:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     762:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     766:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     76a:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     76e:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     772:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     776:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     77a:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     77e:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     782:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     786:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     78a:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     78e:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     792:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     796:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     79a:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     79e:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     7a2:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     7a6:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     7aa:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     7ae:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     7b2:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     7b6:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     7ba:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     7be:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     7c2:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     7c6:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     7ca:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     7ce:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     7d2:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     7d6:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     7da:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     7de:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     7e2:	48 8b 09             	mov    rcx,QWORD PTR [rcx]
+     7e5:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     7e9:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     7ed:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     7f1:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     7f5:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     7f9:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     7fd:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     801:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     805:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     809:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     80d:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     811:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     815:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     819:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     81d:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     821:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     825:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     829:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     82d:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     831:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     835:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     839:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     83d:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     841:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     845:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     849:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     84d:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     851:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     855:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     859:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     85d:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     861:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     865:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     869:	48 8b 12             	mov    rdx,QWORD PTR [rdx]
+     86c:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     870:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     874:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     878:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     87c:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     880:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     884:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     888:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     88c:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     890:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     894:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     898:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     89c:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     8a0:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     8a4:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     8a8:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     8ac:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     8b0:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     8b4:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     8b8:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     8bc:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     8c0:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     8c4:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     8c8:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     8cc:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     8d0:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     8d4:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     8d8:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     8dc:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     8e0:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     8e4:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     8e8:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     8ec:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     8f0:	48 8b 09             	mov    rcx,QWORD PTR [rcx]
+     8f3:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     8f7:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     8fb:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     8ff:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     903:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     907:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     90b:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     90f:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     913:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     917:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     91b:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     91f:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     923:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     927:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     92b:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     92f:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     933:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     937:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     93b:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     93f:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     943:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     947:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     94b:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     94f:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     953:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     957:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     95b:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     95f:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     963:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     967:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     96b:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     96f:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     973:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     977:	48 8b 12             	mov    rdx,QWORD PTR [rdx]
+     97a:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     97e:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     982:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     986:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     98a:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     98e:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     992:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     996:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     99a:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     99e:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     9a2:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     9a6:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     9aa:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     9ae:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     9b2:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     9b6:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     9ba:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     9be:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     9c2:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     9c6:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     9ca:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     9ce:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     9d2:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     9d6:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     9da:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     9de:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     9e2:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     9e6:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     9ea:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     9ee:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     9f2:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     9f6:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     9fa:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     9fe:	48 8b 09             	mov    rcx,QWORD PTR [rcx]
+     a01:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     a05:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     a09:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     a0d:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     a11:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     a15:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     a19:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     a1d:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     a21:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     a25:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     a29:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     a2d:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     a31:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     a35:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     a39:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     a3d:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     a41:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     a45:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     a49:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     a4d:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     a51:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     a55:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     a59:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     a5d:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     a61:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     a65:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     a69:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     a6d:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     a71:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     a75:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     a79:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     a7d:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     a81:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     a85:	48 8b 12             	mov    rdx,QWORD PTR [rdx]
+     a88:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     a8c:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     a90:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     a94:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     a98:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     a9c:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     aa0:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     aa4:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     aa8:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     aac:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     ab0:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     ab4:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     ab8:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     abc:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     ac0:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     ac4:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     ac8:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     acc:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     ad0:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     ad4:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     ad8:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     adc:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     ae0:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     ae4:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     ae8:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     aec:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     af0:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     af4:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     af8:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     afc:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     b00:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     b04:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     b08:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     b0c:	48 8b 09             	mov    rcx,QWORD PTR [rcx]
+     b0f:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     b13:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     b17:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     b1b:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     b1f:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     b23:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     b27:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     b2b:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     b2f:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     b33:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     b37:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     b3b:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     b3f:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     b43:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     b47:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     b4b:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     b4f:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     b53:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     b57:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     b5b:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     b5f:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     b63:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     b67:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     b6b:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     b6f:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     b73:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     b77:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     b7b:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     b7f:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     b83:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     b87:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     b8b:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     b8f:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     b93:	48 8b 12             	mov    rdx,QWORD PTR [rdx]
+     b96:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     b9a:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     b9e:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     ba2:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     ba6:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     baa:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     bae:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     bb2:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     bb6:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     bba:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     bbe:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     bc2:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     bc6:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     bca:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     bce:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     bd2:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     bd6:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     bda:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     bde:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     be2:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     be6:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     bea:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     bee:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     bf2:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     bf6:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     bfa:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     bfe:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     c02:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     c06:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     c0a:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     c0e:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     c12:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     c16:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     c1a:	48 8b 09             	mov    rcx,QWORD PTR [rcx]
+     c1d:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     c21:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     c25:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     c29:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     c2d:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     c31:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     c35:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     c39:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     c3d:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     c41:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     c45:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     c49:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     c4d:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     c51:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     c55:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     c59:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     c5d:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     c61:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     c65:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     c69:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     c6d:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     c71:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     c75:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     c79:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     c7d:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     c81:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     c85:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     c89:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     c8d:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     c91:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     c95:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     c99:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     c9d:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     ca1:	48 8b 12             	mov    rdx,QWORD PTR [rdx]
+     ca4:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     ca8:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     cac:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     cb0:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     cb4:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     cb8:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     cbc:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     cc0:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     cc4:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     cc8:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     ccc:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     cd0:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     cd4:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     cd8:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     cdc:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     ce0:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     ce4:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     ce8:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     cec:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     cf0:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     cf4:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     cf8:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     cfc:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     d00:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     d04:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     d08:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     d0c:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     d10:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     d14:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     d18:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     d1c:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     d20:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     d24:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     d28:	48 8b 09             	mov    rcx,QWORD PTR [rcx]
+     d2b:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     d2f:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     d33:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     d37:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     d3b:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     d3f:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     d43:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     d47:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     d4b:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     d4f:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     d53:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     d57:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     d5b:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     d5f:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     d63:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     d67:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     d6b:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     d6f:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     d73:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     d77:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     d7b:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     d7f:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     d83:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     d87:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     d8b:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     d8f:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     d93:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     d97:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     d9b:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     d9f:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     da3:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     da7:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     dab:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     daf:	48 8b 12             	mov    rdx,QWORD PTR [rdx]
+     db2:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     db6:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     dba:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     dbe:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     dc2:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     dc6:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     dca:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     dce:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     dd2:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     dd6:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     dda:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     dde:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     de2:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     de6:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     dea:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     dee:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     df2:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     df6:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     dfa:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     dfe:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     e02:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     e06:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     e0a:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     e0e:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     e12:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     e16:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     e1a:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     e1e:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     e22:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     e26:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     e2a:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     e2e:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     e32:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     e36:	48 8b 09             	mov    rcx,QWORD PTR [rcx]
+     e39:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     e3d:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     e41:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     e45:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     e49:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     e4d:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     e51:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     e55:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     e59:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     e5d:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     e61:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     e65:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     e69:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     e6d:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     e71:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     e75:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     e79:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     e7d:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     e81:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     e85:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     e89:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     e8d:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     e91:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     e95:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     e99:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     e9d:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     ea1:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     ea5:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     ea9:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     ead:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     eb1:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     eb5:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     eb9:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     ebd:	48 8b 12             	mov    rdx,QWORD PTR [rdx]
+     ec0:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     ec4:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     ec8:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     ecc:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     ed0:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     ed4:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     ed8:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     edc:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     ee0:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     ee4:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     ee8:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     eec:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     ef0:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     ef4:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     ef8:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     efc:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     f00:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     f04:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     f08:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     f0c:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     f10:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     f14:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     f18:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     f1c:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     f20:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     f24:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     f28:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     f2c:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     f30:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     f34:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     f38:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     f3c:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     f40:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     f44:	48 8b 09             	mov    rcx,QWORD PTR [rcx]
+     f47:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     f4b:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     f4f:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     f53:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     f57:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     f5b:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     f5f:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     f63:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     f67:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     f6b:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     f6f:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     f73:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     f77:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     f7b:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     f7f:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     f83:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     f87:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     f8b:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     f8f:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     f93:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     f97:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     f9b:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     f9f:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     fa3:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     fa7:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     fab:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     faf:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     fb3:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     fb7:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     fbb:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     fbf:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     fc3:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     fc7:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     fcb:	48 8b 12             	mov    rdx,QWORD PTR [rdx]
+     fce:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     fd2:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     fd6:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     fda:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     fde:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+     fe2:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+     fe6:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+     fea:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+     fee:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+     ff2:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+     ff6:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+     ffa:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+     ffe:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+    1002:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+    1006:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+    100a:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+    100e:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+    1012:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+    1016:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+    101a:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+    101e:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+    1022:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+    1026:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+    102a:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+    102e:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+    1032:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+    1036:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+    103a:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+    103e:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+    1042:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+    1046:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+    104a:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+    104e:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+    1052:	48 8b 09             	mov    rcx,QWORD PTR [rcx]
+    1055:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+    1059:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+    105d:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+    1061:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+    1065:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+    1069:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+    106d:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+    1071:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+    1075:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+    1079:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+    107d:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+    1081:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+    1085:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+    1089:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+    108d:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+    1091:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+    1095:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+    1099:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+    109d:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+    10a1:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+    10a5:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+    10a9:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+    10ad:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+    10b1:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+    10b5:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+    10b9:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+    10bd:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+    10c1:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+    10c5:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+    10c9:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+    10cd:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+    10d1:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+    10d5:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+    10d9:	48 8b 12             	mov    rdx,QWORD PTR [rdx]
+    10dc:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+    10e0:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+    10e4:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+    10e8:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+    10ec:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+    10f0:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+    10f4:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+    10f8:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+    10fc:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+    1100:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+    1104:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+    1108:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+    110c:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+    1110:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+    1114:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+    1118:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+    111c:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+    1120:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+    1124:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+    1128:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+    112c:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+    1130:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+    1134:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+    1138:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+    113c:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+    1140:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+    1144:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+    1148:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+    114c:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+    1150:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+    1154:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+    1158:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+    115c:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+    1160:	48 8b 09             	mov    rcx,QWORD PTR [rcx]
+    1163:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+    1167:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+    116b:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+    116f:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+    1173:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+    1177:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+    117b:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+    117f:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+    1183:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+    1187:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+    118b:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+    118f:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+    1193:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+    1197:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+    119b:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+    119f:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+    11a3:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+    11a7:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+    11ab:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+    11af:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+    11b3:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+    11b7:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+    11bb:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+    11bf:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+    11c3:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+    11c7:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+    11cb:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+    11cf:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+    11d3:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+    11d7:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+    11db:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+    11df:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+    11e3:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+    11e7:	48 8b 12             	mov    rdx,QWORD PTR [rdx]
+    11ea:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+    11ee:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+    11f2:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+    11f6:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+    11fa:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+    11fe:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+    1202:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+    1206:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+    120a:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+    120e:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+    1212:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+    1216:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+    121a:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+    121e:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+    1222:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+    1226:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+    122a:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+    122e:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+    1232:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+    1236:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+    123a:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+    123e:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+    1242:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+    1246:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+    124a:	f2 0f 2a c0          	cvtsi2sd xmm0,eax
+    124e:	f2 0f 2a c9          	cvtsi2sd xmm1,ecx
+    1252:	f2 0f 2a d2          	cvtsi2sd xmm2,edx
+    1256:	f2 0f 2a db          	cvtsi2sd xmm3,ebx
+    125a:	f2 0f 2a e4          	cvtsi2sd xmm4,esp
+    125e:	f2 0f 2a ed          	cvtsi2sd xmm5,ebp
+    1262:	f2 0f 2a f6          	cvtsi2sd xmm6,esi
+    1266:	f2 0f 2a ff          	cvtsi2sd xmm7,edi
+    126a:	83 e8 01             	sub    eax,0x1
+    126d:	0f 85 0d ee ff ff    	jne    0x80
+    1273:	66 90                	xchg   ax,ax
+    1275:	66 90                	xchg   ax,ax
+    1277:	66 90                	xchg   ax,ax
+    1279:	66 90                	xchg   ax,ax
+    127b:	66 90                	xchg   ax,ax
+    127d:	66 90                	xchg   ax,ax
+    127f:	66 90                	xchg   ax,ax
+    1281:	66 90                	xchg   ax,ax
+    1283:	48 81 c4 a4 6a 00 00 	add    rsp,0x6aa4
+    128a:	41 59                	pop    r9
+    128c:	41 58                	pop    r8
+    128e:	5f                   	pop    rdi
+    128f:	5e                   	pop    rsi
+    1290:	5d                   	pop    rbp
+    1291:	5b                   	pop    rbx
+    1292:	0f 77                	emms   
+    1294:	c3                   	ret    

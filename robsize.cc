@@ -93,7 +93,14 @@ const test_info tests[] = {
     { NO_COMP, "alternating kaddd kN, kN+1, kN+1 and por mmN, mmN+1" }, // 41
     { NO_COMP, "kaddb k1, k2, k3" }, // 42
     { NO_COMP, "kaddd kN, kN+1, kN+1" }, // 43
-    { NO_COMP, "cvtsi2sd xmm, xmm"}, // 44
+    { NO_COMP, "cvtsi2sd xmm, xmm 4-times unrolled"}, // 44
+    { NO_COMP, "cvtsi2sd xmm, xmm 8-times unrolled"}, // 45 
+    { 0, "inc rax"}, // 46 
+    { 0, "inc r64"}, // 47 
+    { 0, "add rax rax"}, // 48
+    { 0, "add r64 r64"}, // 49
+    { 0, "addsd xmm0 xmm0"}, // 50
+    { 0, "addsd xmm xmm"}, // 51	
 };
 
 const int test_count = sizeof(tests) / sizeof(tests[0]);
@@ -167,7 +174,7 @@ int add_filler(unsigned char* ibuf, int instr, int i, int k)
             }
         case 22: ADD_BYTE(0x31);	ADD_BYTE(0xc0 | reg[i&3]<<3 | reg[(i+1)&3]); break;	// xor (ebx, ebp, esi, edi), (edi, ebx, ebp, esi)
         case 23: ADD_WORD(0xe883 | (reg[i&3]<<8)); 	ADD_BYTE(i); break; // sub reg, val
-        case 24: ADD_WORD(0x0348);	ADD_BYTE(0xc0 | reg[i&3]<<3 | reg[i&3]); break;	// add64 (rbx, rbp, rsi, rdi), (rbx, rbp, rsi, rdi)
+        case 24: ADD_BYTE(0x48); ADD_BYTE(0x03); ADD_BYTE(0xc0 | reg[i&3]<<3 | reg[i&3]); break;	// add64 (rbx, rbp, rsi, rdi), (rbx, rbp, rsi, rdi)
         case 25: ADD_WORD(0x8b48); ADD_BYTE(0xc0 | reg[i&3]<<3 | reg[(i+1)&3]); break;	// mov64 (ebx, ebp, esi, edi), (edi, ebx, ebp, esi)
         case 26: ADD_WORD(0xf162); ADD_BYTE(0x5 | (0xf - (i&7)) << 3); ADD_BYTE(0x48); ADD_BYTE(0xef); ADD_BYTE(0xc0 | ((i&7)<<3) | ((i+1)&7)); break;	// vpxord zmm, zmm, zmm+1 AVX512
         case 27: ADD_BYTE(0xc4); ADD_BYTE(0xe1); ADD_BYTE(0xed); ADD_BYTE(0x4a); ADD_BYTE(0xcb); break;  // kaddd k1, k2, k3
@@ -216,11 +223,14 @@ int add_filler(unsigned char* ibuf, int instr, int i, int k)
         case 42: ADD_BYTE(0xc5); ADD_BYTE(0xed); ADD_BYTE(0x4a); ADD_BYTE(0xcb); break;  // kaddb k1, k2, k3
         case 43: ADD_BYTE(0xc4); ADD_BYTE(0xe1); ADD_BYTE(0xfd & ~(((i+1)&7)<<3)); ADD_BYTE(0x4a);
                  ADD_BYTE(0xc0 | (i&7)<<3 | ((i+1)&7)); break;  // kaddd kN, kN+1, kN+1
-<<<<<<< HEAD
-	case 44: ADD_WORD(0xf30f); ADD_BYTE(0x2a); ADD_BYTE(0xc0 | reg[i&3]); break; // cvtsi2sd xmm, xmm
-=======
-	case 44: ADD_BYTE(0xf2); ADD_BYTE(0x0f); ADD_BYTE(0x2a); ADD_BYTE(0xc0 | ((i&3)<<3) | (i&3)); break; // cvtsi2sd xmm, xmm
->>>>>>> 9786af701ea609dde54ba334a00172790a68cbba
+	case 44: ADD_BYTE(0xf2); ADD_BYTE(0x0f); ADD_BYTE(0x2a); ADD_BYTE(0xc0 | ((i&3)<<3) | (i&3)); break; // cvtsi2sd xmm, xmm 4 times unrolled
+	case 45: ADD_BYTE(0xf2); ADD_BYTE(0x0f); ADD_BYTE(0x2a); ADD_BYTE(0xc0 | ((i&7)<<3) | (i&7)); break; // cvtsi2sd xmm, xmm 8 times unrolled
+	case 46: ADD_BYTE(0x48); ADD_BYTE(0xff); ADD_BYTE(0xc0 | reg[0]); break; // inc rax
+	case 47: ADD_BYTE(0x48); ADD_BYTE(0xff); ADD_BYTE(0xc0 | reg[i&3]); break; // inc r64
+	case 48: ADD_BYTE(0x48); ADD_BYTE(0x03); ADD_BYTE(0xc0 | reg[0]<<3 | reg[0]); break; // add rax rax 
+	case 49: ADD_BYTE(0x48); ADD_BYTE(0x03); ADD_BYTE(0xc0 | reg[i&3]<<3 | reg[i&3]); break; // add r64 r64 
+	case 50: ADD_BYTE(0xf2); ADD_BYTE(0x0f); ADD_BYTE(0x58); ADD_BYTE(0xc0); break; // addsd xmm0 xmm0
+	case 51: ADD_BYTE(0xf2); ADD_BYTE(0x0f); ADD_BYTE(0x58); ADD_BYTE(0xc0 | (i&1)<<3 | (i&1)); break; // addsd xmm xmm
 
     }
 
