@@ -101,6 +101,12 @@ const test_info tests[] = {
     { 0, "add r64 r64"}, // 49
     { 0, "addsd xmm0 xmm0"}, // 50
     { 0, "addsd xmm xmm"}, // 51	
+    { 0, "inc r8"}, // 52 
+    { 0, "inc r16"}, // 53 
+    { 0, "inc r32"}, // 54
+    { 0, "inc r8 alternating"}, // 55 
+    { 0, "inc r16 alternating"}, // 56 
+    { 0, "inc r32 alternating"}, // 57 
 };
 
 const int test_count = sizeof(tests) / sizeof(tests[0]);
@@ -231,6 +237,15 @@ int add_filler(unsigned char* ibuf, int instr, int i, int k)
 	case 49: ADD_BYTE(0x48); ADD_BYTE(0x03); ADD_BYTE(0xc0 | reg[i&3]<<3 | reg[i&3]); break; // add r64 r64 
 	case 50: ADD_BYTE(0xf2); ADD_BYTE(0x0f); ADD_BYTE(0x58); ADD_BYTE(0xc0); break; // addsd xmm0 xmm0
 	case 51: ADD_BYTE(0xf2); ADD_BYTE(0x0f); ADD_BYTE(0x58); ADD_BYTE(0xc0 | (i&1)<<3 | (i&1)); break; // addsd xmm xmm
+
+	case 52: ADD_BYTE(0xfe); ADD_BYTE(0xc0 | reg[0] ); break; // inc r8 single
+	case 53: ADD_BYTE(0x66); ADD_BYTE(0x40); break; // inc r16 single
+	case 54: ADD_BYTE(0xff); ADD_BYTE(0xc0 | reg[0] ); break; // inc r32 single 
+	case 55:if(i&1){ 	ADD_BYTE(0xfe); ADD_BYTE(0xc0); break;}
+	    		else{	ADD_BYTE(0xfe); ADD_BYTE(0xc3); break;}	// inc r8 alternating 
+	case 56: ADD_BYTE(0x66); ADD_BYTE(0x40 | (i%1)); break; // inc r16 alternating
+	case 57: ADD_BYTE(0xff); ADD_BYTE(0xc0 | reg[i&3]); break; // inc r32 alternating 
+
 
     }
 
