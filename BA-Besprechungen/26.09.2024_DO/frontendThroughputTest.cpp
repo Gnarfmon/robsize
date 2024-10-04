@@ -72,14 +72,14 @@ int main(int argc, char** argv) {
 
   }
 
-  int j=1,  e = 0;
-  long long NITER = 1;
+  int e = 0;
+  unsigned long long NITER = 1;
   long long diff = 0, result = 0;
-  // time measurement
 do{
   
-  j = 0;
   diff = result;
+
+  // time measurement
   wct_start = getTimeStamp();
   ioctl(perf_fd, PERF_EVENT_IOC_ENABLE, 0);
 
@@ -87,9 +87,7 @@ do{
   	// benchmark loop
   	#pragma unroll(8)	
   	for (int k=1; k<NI; ++k) {
-		j++;
   		e = (a[k] + b[k] + a[k]);
-     		//c[k] =  e;
 		d[k] = e * b[k];
   	}
   	// end of benchmark loop  
@@ -97,12 +95,12 @@ do{
   
   ioctl(perf_fd, PERF_EVENT_IOC_DISABLE, 0);
   wct_end = getTimeStamp();
-
+  // end of time measurement
   int err = read(perf_fd, &result, sizeof(long long));
   if (err < 0) {
     return 1;
   }
-  printf("j=%d, NITER=%lld\n", j, NITER);
+  printf("e=%d | ", e);
   if(NITER == 0)break;
   NITER *= 2; 
 }while((wct_end-wct_start) < 1.0);//run benchmark at least 1.0 seconds

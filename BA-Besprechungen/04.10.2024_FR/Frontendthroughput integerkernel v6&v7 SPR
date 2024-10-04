@@ -1,0 +1,40 @@
+muco124h@f2179:~/Bachelor/other/ce_project/FrontendTests$ srun --cpu-freq=2000000-2000000:performance ./frontend_int_v7_nounroll 1600 2000000
+ NI = 1600, size = 25.00KiB, CPU Frequency = 2.00GHz
+Cycles calculated per high-level iteration calculated: 2.020755 | counted: 2.015487
+Throughput of non loop-overhead-instructions caclulated: 1.4846 | counted: 1.4885
+Highlevel Iterations:1048576, Total walltime: 1.695132s
+muco124h@f2179:~/Bachelor/other/ce_project/FrontendTests$ srun --cpu-freq=2000000-2000000:performance ./frontend_int_v7_unroll2 1600 2000000
+ NI = 1600, size = 25.00KiB, CPU Frequency = 2.00GHz
+Cycles calculated per high-level iteration calculated: 1.009130 | counted: 1.007505
+Throughput of non loop-overhead-instructions caclulated: 2.9729 | counted: 2.9777
+Highlevel Iterations:2097152, Total walltime: 1.693040s
+muco124h@f2179:~/Bachelor/other/ce_project/FrontendTests$ srun --cpu-freq=2000000-2000000:performance ./frontend_int_v7_unroll4 1600 2000000
+ NI = 1600, size = 25.00KiB, CPU Frequency = 2.00GHz
+Cycles calculated per high-level iteration calculated: 1.005627 | counted: 1.000009
+Throughput of non loop-overhead-instructions caclulated: 2.9832 | counted: 3.0000
+Highlevel Iterations:2097152, Total walltime: 1.687163s
+muco124h@f2179:~/Bachelor/other/ce_project/FrontendTests$ srun --cpu-freq=2000000-2000000:performance ./frontend_int_v7_unroll8 1600 2000000
+ NI = 1600, size = 25.00KiB, CPU Frequency = 2.00GHz
+Cycles calculated per high-level iteration calculated: 1.001870 | counted: 1.000247
+Throughput of non loop-overhead-instructions caclulated: 2.9944 | counted: 2.9993
+Highlevel Iterations:2097152, Total walltime: 1.680859s
+muco124h@f2179:~/Bachelor/other/ce_project/FrontendTests$ srun --cpu-freq=2000000-2000000:performance ./frontend_int_v6_unroll8 1600 2000000
+ NI = 1600, size = 25.00KiB, CPU Frequency = 2.00GHz
+Cycles calculated per high-level iteration calculated: 0.626072 | counted: 0.625036
+Throughput of non loop-overhead-instructions caclulated: 4.7918 | counted: 4.7997
+Highlevel Iterations:2097152, Total walltime: 1.050375s
+muco124h@f2179:~/Bachelor/other/ce_project/FrontendTests$ srun --cpu-freq=2000000-2000000:performance ./frontend_int_v6_unroll4 1600 2000000
+ NI = 1600, size = 25.00KiB, CPU Frequency = 2.00GHz
+Cycles calculated per high-level iteration calculated: 0.728740 | counted: 0.726817
+Throughput of non loop-overhead-instructions caclulated: 4.1167 | counted: 4.1276
+Highlevel Iterations:2097152, Total walltime: 1.222623s
+muco124h@f2179:~/Bachelor/other/ce_project/FrontendTests$ srun --cpu-freq=2000000-2000000:performance ./frontend_int_v6_unroll2 1600 2000000
+ NI = 1600, size = 25.00KiB, CPU Frequency = 2.00GHz
+Cycles calculated per high-level iteration calculated: 1.018129 | counted: 1.016339
+Throughput of non loop-overhead-instructions caclulated: 2.9466 | counted: 2.9518
+Highlevel Iterations:2097152, Total walltime: 1.708136s
+muco124h@f2179:~/Bachelor/other/ce_project/FrontendTests$ srun --cpu-freq=2000000-2000000:performance ./frontend_int_v6_nounroll 1600 2000000
+ NI = 1600, size = 25.00KiB, CPU Frequency = 2.00GHz
+Cycles calculated per high-level iteration calculated: 1.030587 | counted: 1.028987
+Throughput of non loop-overhead-instructions caclulated: 2.9110 | counted: 2.9155
+Highlevel Iterations:2097152, Total walltime: 1.729038s
