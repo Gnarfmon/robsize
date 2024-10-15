@@ -1,0 +1,5 @@
+Using a kernel with high theoretical throughput to investigate wether frontend limitations become visible on Ice Lake (Server) (exact name Intel Xeon Platinum 8360Y)  architecture.
+NI chosen to result in workingset size approximatley 3/4 of L1-instruction cache size(32KiB https://en.wikichip.org/wiki/intel/microarchitectures/ice_lake_(server) and "lscpu" command ).
+Test is run with  "srun --cpu-freq=2400000-2400000:performance ./frontendThroughputTest 800 2400000" on singlenode partition on fritz.
+Benchmark files: ./frontendThroughoutTest*/.cpp/.s
+
