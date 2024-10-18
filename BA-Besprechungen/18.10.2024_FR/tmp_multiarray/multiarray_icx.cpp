@@ -10,8 +10,8 @@
 #include <sys/ioctl.h>
 #include <errno.h>
 
-#include "dep/timing.cpp"
-#include "dep/perfctr.cpp"
+#include "../dep/timing.cpp"
+#include "../dep/perfctr.cpp"
 
 
 int main(int argc, char** argv) {
