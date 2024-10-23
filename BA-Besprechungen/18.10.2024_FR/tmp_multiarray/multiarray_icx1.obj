@@ -225,25 +225,37 @@ Disassembly of section .text:
  38e:	4d 8d 0c 37          	lea    (%r15,%rsi,1),%r9
  392:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
  399:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+ START
+ 0
  3a0:	c4 81 7b 10 4c da f8 	vmovsd -0x8(%r10,%r11,8),%xmm1
  3a7:	c4 81 7b 10 74 d9 f8 	vmovsd -0x8(%r9,%r11,8),%xmm6
+ 1
  3ae:	c4 81 73 58 94 da 80 	vaddsd 0xbb80(%r10,%r11,8),%xmm1,%xmm2
  3b5:	bb 00 00 
+ 2
  3b8:	c4 81 4b 58 bc d9 80 	vaddsd 0xbb80(%r9,%r11,8),%xmm6,%xmm7
  3bf:	bb 00 00 
+ 3
  3c2:	c4 81 6b 58 5c da 08 	vaddsd 0x8(%r10,%r11,8),%xmm2,%xmm3
  3c9:	c4 01 43 58 44 d9 08 	vaddsd 0x8(%r9,%r11,8),%xmm7,%xmm8
+ 4
  3d0:	c4 81 63 58 a4 da 80 	vaddsd -0xbb80(%r10,%r11,8),%xmm3,%xmm4
  3d7:	44 ff ff 
+ 5
  3da:	c4 01 3b 58 8c d9 80 	vaddsd -0xbb80(%r9,%r11,8),%xmm8,%xmm9
  3e1:	44 ff ff 
  3e4:	c5 fb 59 ec          	vmulsd %xmm4,%xmm0,%xmm5
+ 6
  3e8:	c4 41 7b 59 d1       	vmulsd %xmm9,%xmm0,%xmm10
  3ed:	c4 81 7b 11 2c da    	vmovsd %xmm5,(%r10,%r11,8)
+ 7
  3f3:	c4 01 7b 11 14 d9    	vmovsd %xmm10,(%r9,%r11,8)
  3f9:	49 ff c3             	inc    %r11
+ 8
  3fc:	49 81 fb 6f 17 00 00 	cmp    $0x176f,%r11
  403:	7c 9b                	jl     3a0 <main+0x3a0>
+9
+ END
  405:	41 ff c0             	inc    %r8d
  408:	48 81 c6 80 bb 00 00 	add    $0xbb80,%rsi
  40f:	41 81 f8 6f 17 00 00 	cmp    $0x176f,%r8d

@@ -1,0 +1,15 @@
+Vor Treffen:
+
+Google spreadsheet: https://docs.google.com/spreadsheets/d/1iGvNxjUM_2M-HoV-lEtgIRa1va2htJPL_V-JOY4eNLo/edit?gid=0#gid=0
+beobachtungen zu fused/unfused μops:
+-bei zu beobachtendem Laufzeitanstieg überschreitet unfused μops Streambuffer 60-bzw. 70-Byte Grenze 
+	-> streambuffer kapazität scheinbar unfused μops,
+	microfusion findet in IDQ statt,
+	sunny cove LSD/IDQ kann bis zu 70 μop-Loops https://en.wikichip.org/wiki/intel/microarchitectures/sunny_cove#.C2.B5OP-Fusion_.26_LSD
+-warum werden bei vielen GS Arrays in loops aufgeteilt? -> evtl. Assembly/Compiler Coding Rule 21. intel opt. ref. manual(April 2024)? 
+	passt aber nicht zu LSD conditions
+-DSB Nutzung interessant? -> perfMonEvents intel opt. ref. manual(April 2024) 22-60?
+-evtl. µop cache TP anschauen?
+
+
+Nach Treffen:

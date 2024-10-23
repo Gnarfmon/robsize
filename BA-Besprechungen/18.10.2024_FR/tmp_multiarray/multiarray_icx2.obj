@@ -331,33 +331,48 @@ Disassembly of section .text:
  5a4:	49 8d 04 31          	lea    (%r9,%rsi,1),%rax
  5a8:	4d 8d 1c 37          	lea    (%r15,%rsi,1),%r11
  5ac:	4d 8d 14 36          	lea    (%r14,%rsi,1),%r10
+ START
+ 0
  5b0:	c5 fb 10 4c d0 f8    	vmovsd -0x8(%rax,%rdx,8),%xmm1
  5b6:	c4 c1 7b 10 74 d3 f8 	vmovsd -0x8(%r11,%rdx,8),%xmm6
+ 1
  5bd:	c4 41 7b 10 5c d2 f8 	vmovsd -0x8(%r10,%rdx,8),%xmm11
+ 2
  5c4:	c5 f3 58 94 d0 80 bb 	vaddsd 0xbb80(%rax,%rdx,8),%xmm1,%xmm2
  5cb:	00 00 
+ 3
  5cd:	c4 c1 4b 58 bc d3 80 	vaddsd 0xbb80(%r11,%rdx,8),%xmm6,%xmm7
  5d4:	bb 00 00 
+ 4
  5d7:	c4 41 23 58 a4 d2 80 	vaddsd 0xbb80(%r10,%rdx,8),%xmm11,%xmm12
  5de:	bb 00 00 
+ 5
  5e1:	c5 eb 58 5c d0 08    	vaddsd 0x8(%rax,%rdx,8),%xmm2,%xmm3
  5e7:	c4 41 43 58 44 d3 08 	vaddsd 0x8(%r11,%rdx,8),%xmm7,%xmm8
+ 6
  5ee:	c4 41 1b 58 6c d2 08 	vaddsd 0x8(%r10,%rdx,8),%xmm12,%xmm13
  5f5:	c5 e3 58 a4 d0 80 44 	vaddsd -0xbb80(%rax,%rdx,8),%xmm3,%xmm4
  5fc:	ff ff 
+ 7
  5fe:	c4 41 3b 58 8c d3 80 	vaddsd -0xbb80(%r11,%rdx,8),%xmm8,%xmm9
  605:	44 ff ff 
+ 8
  608:	c4 41 13 58 b4 d2 80 	vaddsd -0xbb80(%r10,%rdx,8),%xmm13,%xmm14
  60f:	44 ff ff 
  612:	c5 fb 59 ec          	vmulsd %xmm4,%xmm0,%xmm5
+ 9
  616:	c4 41 7b 59 d1       	vmulsd %xmm9,%xmm0,%xmm10
  61b:	c4 41 7b 59 fe       	vmulsd %xmm14,%xmm0,%xmm15
  620:	c5 fb 11 2c d0       	vmovsd %xmm5,(%rax,%rdx,8)
+ 10
  625:	c4 41 7b 11 14 d3    	vmovsd %xmm10,(%r11,%rdx,8)
  62b:	c4 41 7b 11 3c d2    	vmovsd %xmm15,(%r10,%rdx,8)
  631:	48 ff c2             	inc    %rdx
+ 11
  634:	48 81 fa 6f 17 00 00 	cmp    $0x176f,%rdx
  63b:	0f 8c 6f ff ff ff    	jl     5b0 <main+0x5b0>
+ 12
+ END
  641:	41 ff c0             	inc    %r8d
  644:	48 81 c6 80 bb 00 00 	add    $0xbb80,%rsi
  64b:	41 81 f8 6f 17 00 00 	cmp    $0x176f,%r8d

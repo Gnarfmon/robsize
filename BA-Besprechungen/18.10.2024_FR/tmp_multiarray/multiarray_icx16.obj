@@ -941,180 +941,255 @@ Disassembly of section .text:
      ffa:	4c 03 f0             	add    %rax,%r14
      ffd:	48 03 c8             	add    %rax,%rcx
     1000:	48 03 d0             	add    %rax,%rdx
+	START
+	0
     1003:	48 8b 84 24 f0 01 00 	mov    0x1f0(%rsp),%rax
     100a:	00 
     100b:	c4 81 7b 10 4c fe f8 	vmovsd -0x8(%r14,%r15,8),%xmm1
+	1
     1012:	c4 01 7b 10 5c fd f8 	vmovsd -0x8(%r13,%r15,8),%xmm11
     1019:	c4 a1 7b 10 74 f8 f8 	vmovsd -0x8(%rax,%r15,8),%xmm6
+	2
     1020:	62 81 ff 08 10 44 fc 	vmovsd -0x8(%r12,%r15,8),%xmm16
     1027:	ff 
+	3
     1028:	c4 a1 4b 58 bc f8 80 	vaddsd 0xbb80(%rax,%r15,8),%xmm6,%xmm7
     102f:	bb 00 00 
+	4
     1032:	c4 81 73 58 94 fe 80 	vaddsd 0xbb80(%r14,%r15,8),%xmm1,%xmm2
     1039:	bb 00 00 
+	5
     103c:	c4 01 23 58 a4 fd 80 	vaddsd 0xbb80(%r13,%r15,8),%xmm11,%xmm12
     1043:	bb 00 00 
+	6
     1046:	62 81 ff 00 58 8c fc 	vaddsd 0xbb80(%r12,%r15,8),%xmm16,%xmm17
     104d:	80 bb 00 00 
+	7
     1051:	c4 21 43 58 44 f8 08 	vaddsd 0x8(%rax,%r15,8),%xmm7,%xmm8
     1058:	c4 81 6b 58 5c fe 08 	vaddsd 0x8(%r14,%r15,8),%xmm2,%xmm3
+	8
     105f:	c4 01 1b 58 6c fd 08 	vaddsd 0x8(%r13,%r15,8),%xmm12,%xmm13
     1066:	62 81 f7 00 58 54 fc 	vaddsd 0x8(%r12,%r15,8),%xmm17,%xmm18
     106d:	01 
+	9
     106e:	c4 21 3b 58 8c f8 80 	vaddsd -0xbb80(%rax,%r15,8),%xmm8,%xmm9
     1075:	44 ff ff 
+	10
     1078:	c4 81 63 58 a4 fe 80 	vaddsd -0xbb80(%r14,%r15,8),%xmm3,%xmm4
     107f:	44 ff ff 
+	11
     1082:	c4 01 13 58 b4 fd 80 	vaddsd -0xbb80(%r13,%r15,8),%xmm13,%xmm14
     1089:	44 ff ff 
+	12
     108c:	62 81 ef 00 58 9c fc 	vaddsd -0xbb80(%r12,%r15,8),%xmm18,%xmm19
     1093:	80 44 ff ff 
     1097:	c4 41 7b 59 d1       	vmulsd %xmm9,%xmm0,%xmm10
+	13
     109c:	c5 fb 59 ec          	vmulsd %xmm4,%xmm0,%xmm5
     10a0:	c4 41 7b 59 fe       	vmulsd %xmm14,%xmm0,%xmm15
     10a5:	62 a1 ff 08 59 e3    	vmulsd %xmm19,%xmm0,%xmm20
+	14
     10ab:	c4 21 7b 11 14 f8    	vmovsd %xmm10,(%rax,%r15,8)
     10b1:	48 8b 84 24 e8 01 00 	mov    0x1e8(%rsp),%rax
     10b8:	00 
+	15
     10b9:	c4 81 7b 11 2c fe    	vmovsd %xmm5,(%r14,%r15,8)
     10bf:	c4 01 7b 11 7c fd 00 	vmovsd %xmm15,0x0(%r13,%r15,8)
+	16
     10c6:	62 a1 ff 08 10 6c f8 	vmovsd -0x8(%rax,%r15,8),%xmm21
     10cd:	ff 
     10ce:	c4 81 7b 10 6c fb f8 	vmovsd -0x8(%r11,%r15,8),%xmm5
+	17
     10d5:	c4 01 7b 10 7c fa f8 	vmovsd -0x8(%r10,%r15,8),%xmm15
     10dc:	62 81 ff 08 11 24 fc 	vmovsd %xmm20,(%r12,%r15,8)
+	18
     10e3:	62 81 ff 08 10 64 f9 	vmovsd -0x8(%r9,%r15,8),%xmm20
     10ea:	ff 
+	19
     10eb:	62 a1 d7 00 58 b4 f8 	vaddsd 0xbb80(%rax,%r15,8),%xmm21,%xmm22
     10f2:	80 bb 00 00 
+	20
     10f6:	c4 81 53 58 b4 fb 80 	vaddsd 0xbb80(%r11,%r15,8),%xmm5,%xmm6
     10fd:	bb 00 00 
+	21
     1100:	62 81 87 08 58 84 fa 	vaddsd 0xbb80(%r10,%r15,8),%xmm15,%xmm16
     1107:	80 bb 00 00 
     110b:	0f 1f 40 00          	nopl   0x0(%rax)
+	22
     110f:	62 81 df 00 58 ac f9 	vaddsd 0xbb80(%r9,%r15,8),%xmm20,%xmm21
     1116:	80 bb 00 00 
+	23
     111a:	62 a1 cf 00 58 7c f8 	vaddsd 0x8(%rax,%r15,8),%xmm22,%xmm23
     1121:	01 
     1122:	c4 81 4b 58 7c fb 08 	vaddsd 0x8(%r11,%r15,8),%xmm6,%xmm7
+	24
     1129:	62 81 ff 00 58 4c fa 	vaddsd 0x8(%r10,%r15,8),%xmm16,%xmm17
     1130:	01 
     1131:	62 81 d7 00 58 74 f9 	vaddsd 0x8(%r9,%r15,8),%xmm21,%xmm22
     1138:	01 
+	25
     1139:	62 21 c7 00 58 84 f8 	vaddsd -0xbb80(%rax,%r15,8),%xmm23,%xmm24
     1140:	80 44 ff ff 
+	26
     1144:	c4 01 43 58 84 fb 80 	vaddsd -0xbb80(%r11,%r15,8),%xmm7,%xmm8
     114b:	44 ff ff 
+	27
     114e:	62 81 f7 00 58 94 fa 	vaddsd -0xbb80(%r10,%r15,8),%xmm17,%xmm18
     1155:	80 44 ff ff 
+	28
     1159:	62 81 cf 00 58 bc f9 	vaddsd -0xbb80(%r9,%r15,8),%xmm22,%xmm23
     1160:	80 44 ff ff 
+	29
     1164:	62 01 ff 08 59 c8    	vmulsd %xmm24,%xmm0,%xmm25
     116a:	c4 41 7b 59 c8       	vmulsd %xmm8,%xmm0,%xmm9
+	30
     116f:	62 a1 ff 08 59 da    	vmulsd %xmm18,%xmm0,%xmm19
     1175:	62 21 ff 08 59 c7    	vmulsd %xmm23,%xmm0,%xmm24
+	31
     117b:	62 21 ff 08 11 0c f8 	vmovsd %xmm25,(%rax,%r15,8)
     1182:	0f 1f 40 00          	nopl   0x0(%rax)
+	32
     1186:	48 8b 84 24 e0 01 00 	mov    0x1e0(%rsp),%rax
     118d:	00 
     118e:	c4 01 7b 11 0c fb    	vmovsd %xmm9,(%r11,%r15,8)
+	33
     1194:	62 81 ff 08 11 1c fa 	vmovsd %xmm19,(%r10,%r15,8)
     119b:	62 21 ff 08 10 54 f8 	vmovsd -0x8(%rax,%r15,8),%xmm26
     11a2:	ff 
+	34
     11a3:	62 01 ff 08 10 4c f8 	vmovsd -0x8(%r8,%r15,8),%xmm25
     11aa:	ff 
     11ab:	c4 21 7b 10 4c fb f8 	vmovsd -0x8(%rbx,%r15,8),%xmm9
+	35
     11b2:	62 a1 ff 08 10 5c fa 	vmovsd -0x8(%rdx,%r15,8),%xmm19
     11b9:	ff 
     11ba:	62 01 ff 08 11 04 f9 	vmovsd %xmm24,(%r9,%r15,8)
+	36
     11c1:	62 21 af 00 58 9c f8 	vaddsd 0xbb80(%rax,%r15,8),%xmm26,%xmm27
     11c8:	80 bb 00 00 
+	37
     11cc:	62 01 b7 00 58 94 f8 	vaddsd 0xbb80(%r8,%r15,8),%xmm25,%xmm26
     11d3:	80 bb 00 00 
+	38
     11d7:	62 a1 e7 00 58 a4 fa 	vaddsd 0xbb80(%rdx,%r15,8),%xmm19,%xmm20
     11de:	80 bb 00 00 
+	39
     11e2:	62 21 a7 00 58 64 f8 	vaddsd 0x8(%rax,%r15,8),%xmm27,%xmm28
     11e9:	01 
     11ea:	62 01 af 00 58 5c f8 	vaddsd 0x8(%r8,%r15,8),%xmm26,%xmm27
     11f1:	01 
+	40
     11f2:	62 a1 df 00 58 6c fa 	vaddsd 0x8(%rdx,%r15,8),%xmm20,%xmm21
     11f9:	01 
+	41
     11fa:	62 21 9f 00 58 ac f8 	vaddsd -0xbb80(%rax,%r15,8),%xmm28,%xmm29
     1201:	80 44 ff ff 
+	42
     1205:	62 01 a7 00 58 a4 f8 	vaddsd -0xbb80(%r8,%r15,8),%xmm27,%xmm28
     120c:	80 44 ff ff 
+	43
     1210:	62 a1 d7 00 58 b4 fa 	vaddsd -0xbb80(%rdx,%r15,8),%xmm21,%xmm22
     1217:	80 44 ff ff 
+	44
     121b:	62 01 ff 08 59 f5    	vmulsd %xmm29,%xmm0,%xmm30
     1221:	62 01 ff 08 59 ec    	vmulsd %xmm28,%xmm0,%xmm29
+	45
     1227:	62 a1 ff 08 59 fe    	vmulsd %xmm22,%xmm0,%xmm23
     122d:	62 21 ff 08 11 34 f8 	vmovsd %xmm30,(%rax,%r15,8)
+	46
     1234:	48 8b 84 24 d8 01 00 	mov    0x1d8(%rsp),%rax
     123b:	00 
     123c:	0f 1f 00             	nopl   (%rax)
+	47
     123f:	62 21 ff 08 10 74 ff 	vmovsd -0x8(%rdi,%r15,8),%xmm30
     1246:	ff 
     1247:	62 01 ff 08 11 2c f8 	vmovsd %xmm29,(%r8,%r15,8)
     124e:	90                   	nop
+	48
     124f:	62 21 ff 08 10 7c f8 	vmovsd -0x8(%rax,%r15,8),%xmm31
     1256:	ff 
     1257:	62 a1 ff 08 11 3c fa 	vmovsd %xmm23,(%rdx,%r15,8)
+	49
     125e:	62 b1 87 00 58 8c f8 	vaddsd 0xbb80(%rax,%r15,8),%xmm31,%xmm1
     1265:	80 bb 00 00 
+	50
     1269:	62 21 8f 00 58 bc ff 	vaddsd 0xbb80(%rdi,%r15,8),%xmm30,%xmm31
     1270:	80 bb 00 00 
+	51
     1274:	c4 a1 73 58 54 f8 08 	vaddsd 0x8(%rax,%r15,8),%xmm1,%xmm2
     127b:	62 b1 87 00 58 4c ff 	vaddsd 0x8(%rdi,%r15,8),%xmm31,%xmm1
     1282:	01 
+	52
     1283:	c4 a1 6b 58 9c f8 80 	vaddsd -0xbb80(%rax,%r15,8),%xmm2,%xmm3
     128a:	44 ff ff 
+	53
     128d:	c4 a1 73 58 94 ff 80 	vaddsd -0xbb80(%rdi,%r15,8),%xmm1,%xmm2
     1294:	44 ff ff 
+	54
     1297:	c5 fb 59 e3          	vmulsd %xmm3,%xmm0,%xmm4
     129b:	c5 fb 59 da          	vmulsd %xmm2,%xmm0,%xmm3
     129f:	c4 a1 7b 11 24 f8    	vmovsd %xmm4,(%rax,%r15,8)
+	55
     12a5:	48 8b 84 24 48 01 00 	mov    0x148(%rsp),%rax
     12ac:	00 
     12ad:	c4 a1 7b 10 64 fe f8 	vmovsd -0x8(%rsi,%r15,8),%xmm4
+	56
     12b4:	c4 a1 7b 11 1c ff    	vmovsd %xmm3,(%rdi,%r15,8)
     12ba:	c4 21 7b 10 54 f8 f8 	vmovsd -0x8(%rax,%r15,8),%xmm10
     12c1:	90                   	nop
+	57
     12c2:	c4 21 2b 58 9c f8 80 	vaddsd 0xbb80(%rax,%r15,8),%xmm10,%xmm11
     12c9:	bb 00 00 
     12cc:	0f 1f 00             	nopl   (%rax)
+	58
     12cf:	c4 a1 5b 58 ac fe 80 	vaddsd 0xbb80(%rsi,%r15,8),%xmm4,%xmm5
     12d6:	bb 00 00 
+	59
     12d9:	c4 21 33 58 94 fb 80 	vaddsd 0xbb80(%rbx,%r15,8),%xmm9,%xmm10
     12e0:	bb 00 00 
     12e3:	0f 1f 40 00          	nopl   0x0(%rax)
+	60
     12e7:	c4 21 23 58 64 f8 08 	vaddsd 0x8(%rax,%r15,8),%xmm11,%xmm12
     12ee:	c4 a1 53 58 74 fe 08 	vaddsd 0x8(%rsi,%r15,8),%xmm5,%xmm6
+	61
     12f5:	c4 21 2b 58 5c fb 08 	vaddsd 0x8(%rbx,%r15,8),%xmm10,%xmm11
+	62
     12fc:	c4 21 1b 58 ac f8 80 	vaddsd -0xbb80(%rax,%r15,8),%xmm12,%xmm13
     1303:	44 ff ff 
+	63
     1306:	c4 a1 4b 58 bc fe 80 	vaddsd -0xbb80(%rsi,%r15,8),%xmm6,%xmm7
     130d:	44 ff ff 
     1310:	90                   	nop
+	64
     1311:	c4 21 23 58 a4 fb 80 	vaddsd -0xbb80(%rbx,%r15,8),%xmm11,%xmm12
     1318:	44 ff ff 
     131b:	c4 41 7b 59 f5       	vmulsd %xmm13,%xmm0,%xmm14
+	65
     1320:	c5 7b 59 c7          	vmulsd %xmm7,%xmm0,%xmm8
     1324:	c4 41 7b 59 ec       	vmulsd %xmm12,%xmm0,%xmm13
     1329:	c4 21 7b 11 34 f8    	vmovsd %xmm14,(%rax,%r15,8)
+	66
     132f:	c4 21 7b 10 74 f9 f8 	vmovsd -0x8(%rcx,%r15,8),%xmm14
     1336:	c4 21 7b 11 04 fe    	vmovsd %xmm8,(%rsi,%r15,8)
+	67
     133c:	c4 21 7b 11 2c fb    	vmovsd %xmm13,(%rbx,%r15,8)
     1342:	c4 21 0b 58 bc f9 80 	vaddsd 0xbb80(%rcx,%r15,8),%xmm14,%xmm15
     1349:	bb 00 00 
+	68
     134c:	62 a1 87 08 58 44 f9 	vaddsd 0x8(%rcx,%r15,8),%xmm15,%xmm16
     1353:	01 
+	69
     1354:	62 a1 ff 00 58 8c f9 	vaddsd -0xbb80(%rcx,%r15,8),%xmm16,%xmm17
     135b:	80 44 ff ff 
+	70
     135f:	62 a1 ff 08 59 d1    	vmulsd %xmm17,%xmm0,%xmm18
     1365:	62 a1 ff 08 11 14 f9 	vmovsd %xmm18,(%rcx,%r15,8)
     136c:	49 ff c7             	inc    %r15
+	71
     136f:	49 81 ff 6f 17 00 00 	cmp    $0x176f,%r15
     1376:	0f 8c 87 fc ff ff    	jl     1003 <main+0x1003>
+	72
+	END
     137c:	8b 94 24 38 01 00 00 	mov    0x138(%rsp),%edx
     1383:	ff c2                	inc    %edx
     1385:	48 8b 84 24 40 01 00 	mov    0x140(%rsp),%rax

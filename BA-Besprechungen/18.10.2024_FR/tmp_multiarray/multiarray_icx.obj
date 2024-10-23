@@ -278,18 +278,26 @@ Disassembly of section .text:
  431:	49 89 c8             	mov    %rcx,%r8
  434:	41 bb 01 00 00 00    	mov    $0x1,%r11d
  43a:	4d 89 c2             	mov    %r8,%r10
+ START
+ 0
  43d:	c4 c1 7b 10 4a f8    	vmovsd -0x8(%r10),%xmm1
  443:	41 ff c3             	inc    %r11d
+ 1
  446:	c4 c1 73 58 92 80 bb 	vaddsd 0xbb80(%r10),%xmm1,%xmm2
  44d:	00 00 
  44f:	c4 c1 6b 58 5a 08    	vaddsd 0x8(%r10),%xmm2,%xmm3
+ 2
  455:	c4 c1 63 58 a2 80 44 	vaddsd -0xbb80(%r10),%xmm3,%xmm4
  45c:	ff ff 
  45e:	c5 fb 59 ec          	vmulsd %xmm4,%xmm0,%xmm5
+ 3
  462:	c4 c1 7b 11 2a       	vmovsd %xmm5,(%r10)
  467:	49 83 c2 08          	add    $0x8,%r10
+ 4
  46b:	41 81 fb 6f 17 00 00 	cmp    $0x176f,%r11d
  472:	7c c9                	jl     43d <main+0x43d>
+ 5
+ END
  474:	41 ff c1             	inc    %r9d
  477:	49 81 c0 80 bb 00 00 	add    $0xbb80,%r8
  47e:	41 81 f9 6f 17 00 00 	cmp    $0x176f,%r9d
