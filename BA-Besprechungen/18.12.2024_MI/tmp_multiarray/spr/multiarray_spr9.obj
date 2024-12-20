@@ -404,6 +404,7 @@ Disassembly of section .text:
  69b:	4c 8b 84 24 18 01 00 	mov    0x118(%rsp),%r8
  6a2:	00 
  6a3:	41 bc 01 00 00 00    	mov    $0x1,%r12d
+ START
  6a9:	c4 81 7b 10 8c e0 18 	vmovsd 0x318(%r8,%r12,8),%xmm1
  6b0:	03 00 00 
  6b3:	c4 a1 7b 10 b4 e7 18 	vmovsd 0x318(%rdi,%r12,8),%xmm6
@@ -508,6 +509,7 @@ Disassembly of section .text:
  89d:	49 ff c4             	inc    %r12
  8a0:	49 83 fc 63          	cmp    $0x63,%r12
  8a4:	0f 8c ff fd ff ff    	jl     6a9 <main+0x6a9>
+ END
  8aa:	4d 8b a0 38 06 00 00 	mov    0x638(%r8),%r12
  8b1:	41 ff c3             	inc    %r11d
  8b4:	4d 89 a0 40 06 00 00 	mov    %r12,0x640(%r8)

@@ -445,6 +445,7 @@ Disassembly of section .text:
      757:	4c 8b 8c 24 18 01 00 	mov    0x118(%rsp),%r9
      75e:	00 
      75f:	45 33 ff             	xor    %r15d,%r15d
+	 START
      762:	c4 81 7b 10 8c f9 20 	vmovsd 0x320(%r9,%r15,8),%xmm1
      769:	03 00 00 
      76c:	c4 81 7b 10 b4 f8 20 	vmovsd 0x320(%r8,%r15,8),%xmm6
@@ -553,7 +554,9 @@ Disassembly of section .text:
      95e:	49 ff c7             	inc    %r15
      961:	49 83 ff 62          	cmp    $0x62,%r15
      965:	0f 82 f7 fd ff ff    	jb     762 <main+0x762>
+	 END1
      96b:	45 33 ff             	xor    %r15d,%r15d
+	 START2
      96e:	c4 81 7b 10 8c fe 20 	vmovsd 0x320(%r14,%r15,8),%xmm1
      975:	03 00 00 
      978:	c4 81 73 58 94 fe 48 	vaddsd 0x648(%r14,%r15,8),%xmm1,%xmm2
@@ -567,6 +570,7 @@ Disassembly of section .text:
      9a1:	49 ff c7             	inc    %r15
      9a4:	49 83 ff 62          	cmp    $0x62,%r15
      9a8:	72 c4                	jb     96e <main+0x96e>
+	 END2
      9aa:	4d 8b b9 38 06 00 00 	mov    0x638(%r9),%r15
      9b1:	ff c0                	inc    %eax
      9b3:	4d 89 b9 40 06 00 00 	mov    %r15,0x640(%r9)

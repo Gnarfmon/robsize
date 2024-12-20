@@ -1,0 +1,531 @@
+
+./tmp_multiarray/spr/multiarray_spr4.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <main>:
+   0:	55                   	push   %rbp
+   1:	48 89 e5             	mov    %rsp,%rbp
+   4:	48 83 e4 80          	and    $0xffffffffffffff80,%rsp
+   8:	41 54                	push   %r12
+   a:	41 55                	push   %r13
+   c:	41 56                	push   %r14
+   e:	41 57                	push   %r15
+  10:	53                   	push   %rbx
+  11:	48 83 ec 58          	sub    $0x58,%rsp
+  15:	bf 03 00 00 00       	mov    $0x3,%edi
+  1a:	48 be fe 9f 9d 19 64 	movabs $0x64199d9ffe,%rsi
+  21:	00 00 00 
+  24:	e8 00 00 00 00       	callq  29 <main+0x29>
+  29:	c5 f8 ae 1c 24       	vstmxcsr (%rsp)
+  2e:	bf 60 09 00 00       	mov    $0x960,%edi
+  33:	81 0c 24 40 80 00 00 	orl    $0x8040,(%rsp)
+  3a:	c5 f8 ae 14 24       	vldmxcsr (%rsp)
+  3f:	e8 00 00 00 00       	callq  44 <main+0x44>
+  44:	49 89 c5             	mov    %rax,%r13
+  47:	bf 60 09 00 00       	mov    $0x960,%edi
+  4c:	e8 00 00 00 00       	callq  51 <main+0x51>
+  51:	49 89 c6             	mov    %rax,%r14
+  54:	bf 60 09 00 00       	mov    $0x960,%edi
+  59:	e8 00 00 00 00       	callq  5e <main+0x5e>
+  5e:	49 89 c4             	mov    %rax,%r12
+  61:	bf 60 09 00 00       	mov    $0x960,%edi
+  66:	e8 00 00 00 00       	callq  6b <main+0x6b>
+  6b:	49 89 c7             	mov    %rax,%r15
+  6e:	bf 60 09 00 00       	mov    $0x960,%edi
+  73:	e8 00 00 00 00       	callq  78 <main+0x78>
+  78:	48 89 c3             	mov    %rax,%rbx
+  7b:	4c 89 64 24 08       	mov    %r12,0x8(%rsp)
+  80:	45 32 c0             	xor    %r8b,%r8b
+  83:	c5 f5 57 c9          	vxorpd %ymm1,%ymm1,%ymm1
+  87:	33 f6                	xor    %esi,%esi
+  89:	4c 89 74 24 28       	mov    %r14,0x28(%rsp)
+  8e:	4c 89 f9             	mov    %r15,%rcx
+  91:	4c 89 2c 24          	mov    %r13,(%rsp)
+  95:	4c 89 e2             	mov    %r12,%rdx
+  98:	c5 f9 57 c0          	vxorpd %xmm0,%xmm0,%xmm0
+  9c:	4c 89 f0             	mov    %r14,%rax
+  9f:	4d 89 e9             	mov    %r13,%r9
+  a2:	4c 8d 34 33          	lea    (%rbx,%rsi,1),%r14
+  a6:	4d 89 f5             	mov    %r14,%r13
+  a9:	49 83 e5 1f          	and    $0x1f,%r13
+  ad:	45 85 ed             	test   %r13d,%r13d
+  b0:	74 46                	je     f8 <main+0xf8>
+  b2:	41 f7 c5 07 00 00 00 	test   $0x7,%r13d
+  b9:	0f 85 4a 05 00 00    	jne    609 <main+0x609>
+  bf:	41 f7 dd             	neg    %r13d
+  c2:	45 33 db             	xor    %r11d,%r11d
+  c5:	41 83 c5 20          	add    $0x20,%r13d
+  c9:	41 c1 ed 03          	shr    $0x3,%r13d
+  cd:	45 89 ea             	mov    %r13d,%r10d
+  d0:	c4 81 7b 11 04 d9    	vmovsd %xmm0,(%r9,%r11,8)
+  d6:	c4 a1 7b 11 04 d8    	vmovsd %xmm0,(%rax,%r11,8)
+  dc:	c4 a1 7b 11 04 da    	vmovsd %xmm0,(%rdx,%r11,8)
+  e2:	c4 a1 7b 11 04 d9    	vmovsd %xmm0,(%rcx,%r11,8)
+  e8:	c4 81 7b 11 04 de    	vmovsd %xmm0,(%r14,%r11,8)
+  ee:	49 ff c3             	inc    %r11
+  f1:	4d 3b da             	cmp    %r10,%r11
+  f4:	72 da                	jb     d0 <main+0xd0>
+  f6:	eb 03                	jmp    fb <main+0xfb>
+  f8:	45 33 d2             	xor    %r10d,%r10d
+  fb:	41 f7 dd             	neg    %r13d
+  fe:	41 83 c5 04          	add    $0x4,%r13d
+ 102:	41 83 e5 0f          	and    $0xf,%r13d
+ 106:	41 f7 dd             	neg    %r13d
+ 109:	41 83 c5 64          	add    $0x64,%r13d
+ 10d:	45 89 eb             	mov    %r13d,%r11d
+ 110:	c4 81 7d 11 0c d1    	vmovupd %ymm1,(%r9,%r10,8)
+ 116:	c4 a1 7d 11 0c d0    	vmovupd %ymm1,(%rax,%r10,8)
+ 11c:	c4 a1 7d 11 0c d2    	vmovupd %ymm1,(%rdx,%r10,8)
+ 122:	c4 a1 7d 11 0c d1    	vmovupd %ymm1,(%rcx,%r10,8)
+ 128:	c4 81 7d 11 0c d6    	vmovupd %ymm1,(%r14,%r10,8)
+ 12e:	c4 81 7d 11 4c d1 20 	vmovupd %ymm1,0x20(%r9,%r10,8)
+ 135:	c4 a1 7d 11 4c d0 20 	vmovupd %ymm1,0x20(%rax,%r10,8)
+ 13c:	c4 a1 7d 11 4c d2 20 	vmovupd %ymm1,0x20(%rdx,%r10,8)
+ 143:	c4 a1 7d 11 4c d1 20 	vmovupd %ymm1,0x20(%rcx,%r10,8)
+ 14a:	c4 81 7d 11 4c d6 20 	vmovupd %ymm1,0x20(%r14,%r10,8)
+ 151:	c4 81 7d 11 4c d1 40 	vmovupd %ymm1,0x40(%r9,%r10,8)
+ 158:	c4 a1 7d 11 4c d0 40 	vmovupd %ymm1,0x40(%rax,%r10,8)
+ 15f:	c4 a1 7d 11 4c d2 40 	vmovupd %ymm1,0x40(%rdx,%r10,8)
+ 166:	c4 a1 7d 11 4c d1 40 	vmovupd %ymm1,0x40(%rcx,%r10,8)
+ 16d:	c4 81 7d 11 4c d6 40 	vmovupd %ymm1,0x40(%r14,%r10,8)
+ 174:	c4 81 7d 11 4c d1 60 	vmovupd %ymm1,0x60(%r9,%r10,8)
+ 17b:	c4 a1 7d 11 4c d0 60 	vmovupd %ymm1,0x60(%rax,%r10,8)
+ 182:	c4 a1 7d 11 4c d2 60 	vmovupd %ymm1,0x60(%rdx,%r10,8)
+ 189:	c4 a1 7d 11 4c d1 60 	vmovupd %ymm1,0x60(%rcx,%r10,8)
+ 190:	c4 81 7d 11 4c d6 60 	vmovupd %ymm1,0x60(%r14,%r10,8)
+ 197:	49 83 c2 10          	add    $0x10,%r10
+ 19b:	4d 3b d3             	cmp    %r11,%r10
+ 19e:	0f 82 6c ff ff ff    	jb     110 <main+0x110>
+ 1a4:	45 8d 55 01          	lea    0x1(%r13),%r10d
+ 1a8:	41 83 fa 64          	cmp    $0x64,%r10d
+ 1ac:	77 7d                	ja     22b <main+0x22b>
+ 1ae:	45 89 eb             	mov    %r13d,%r11d
+ 1b1:	41 f7 db             	neg    %r11d
+ 1b4:	41 83 c3 64          	add    $0x64,%r11d
+ 1b8:	41 83 fb 04          	cmp    $0x4,%r11d
+ 1bc:	0f 82 c3 04 00 00    	jb     685 <main+0x685>
+ 1c2:	45 89 dc             	mov    %r11d,%r12d
+ 1c5:	45 33 d2             	xor    %r10d,%r10d
+ 1c8:	41 83 e4 fc          	and    $0xfffffffc,%r12d
+ 1cc:	43 8d 7c 15 00       	lea    0x0(%r13,%r10,1),%edi
+ 1d1:	41 83 c2 04          	add    $0x4,%r10d
+ 1d5:	48 63 ff             	movslq %edi,%rdi
+ 1d8:	c4 c1 7d 11 0c f9    	vmovupd %ymm1,(%r9,%rdi,8)
+ 1de:	c5 fd 11 0c f8       	vmovupd %ymm1,(%rax,%rdi,8)
+ 1e3:	c5 fd 11 0c fa       	vmovupd %ymm1,(%rdx,%rdi,8)
+ 1e8:	c5 fd 11 0c f9       	vmovupd %ymm1,(%rcx,%rdi,8)
+ 1ed:	c4 c1 7d 11 0c fe    	vmovupd %ymm1,(%r14,%rdi,8)
+ 1f3:	45 3b d4             	cmp    %r12d,%r10d
+ 1f6:	72 d4                	jb     1cc <main+0x1cc>
+ 1f8:	45 3b e3             	cmp    %r11d,%r12d
+ 1fb:	73 2e                	jae    22b <main+0x22b>
+ 1fd:	47 8d 54 25 00       	lea    0x0(%r13,%r12,1),%r10d
+ 202:	41 ff c4             	inc    %r12d
+ 205:	4d 63 d2             	movslq %r10d,%r10
+ 208:	c4 81 7b 11 04 d1    	vmovsd %xmm0,(%r9,%r10,8)
+ 20e:	c4 a1 7b 11 04 d0    	vmovsd %xmm0,(%rax,%r10,8)
+ 214:	c4 a1 7b 11 04 d2    	vmovsd %xmm0,(%rdx,%r10,8)
+ 21a:	c4 a1 7b 11 04 d1    	vmovsd %xmm0,(%rcx,%r10,8)
+ 220:	c4 81 7b 11 04 d6    	vmovsd %xmm0,(%r14,%r10,8)
+ 226:	45 3b e3             	cmp    %r11d,%r12d
+ 229:	72 d2                	jb     1fd <main+0x1fd>
+ 22b:	41 fe c0             	inc    %r8b
+ 22e:	48 81 c1 20 03 00 00 	add    $0x320,%rcx
+ 235:	48 81 c2 20 03 00 00 	add    $0x320,%rdx
+ 23c:	48 05 20 03 00 00    	add    $0x320,%rax
+ 242:	49 81 c1 20 03 00 00 	add    $0x320,%r9
+ 249:	48 81 c6 20 03 00 00 	add    $0x320,%rsi
+ 250:	41 80 f8 03          	cmp    $0x3,%r8b
+ 254:	0f 82 48 fe ff ff    	jb     a2 <main+0xa2>
+ 25a:	4c 8b 64 24 08       	mov    0x8(%rsp),%r12
+ 25f:	33 c0                	xor    %eax,%eax
+ 261:	4c 8b 74 24 28       	mov    0x28(%rsp),%r14
+ 266:	4c 8b 2c 24          	mov    (%rsp),%r13
+ 26a:	c5 fb 10 05 00 00 00 	vmovsd 0x0(%rip),%xmm0        # 272 <main+0x272>
+ 271:	00 
+ 272:	c4 c1 7b 11 45 00    	vmovsd %xmm0,0x0(%r13)
+ 278:	c4 c1 7b 11 85 18 03 	vmovsd %xmm0,0x318(%r13)
+ 27f:	00 00 
+ 281:	c4 c1 7b 11 06       	vmovsd %xmm0,(%r14)
+ 286:	c4 c1 7b 11 86 18 03 	vmovsd %xmm0,0x318(%r14)
+ 28d:	00 00 
+ 28f:	c4 c1 7b 11 04 24    	vmovsd %xmm0,(%r12)
+ 295:	c4 c1 7b 11 84 24 18 	vmovsd %xmm0,0x318(%r12)
+ 29c:	03 00 00 
+ 29f:	c4 c1 7b 11 07       	vmovsd %xmm0,(%r15)
+ 2a4:	c4 c1 7b 11 87 18 03 	vmovsd %xmm0,0x318(%r15)
+ 2ab:	00 00 
+ 2ad:	c5 fb 11 03          	vmovsd %xmm0,(%rbx)
+ 2b1:	c5 fb 11 83 18 03 00 	vmovsd %xmm0,0x318(%rbx)
+ 2b8:	00 
+ 2b9:	c4 c1 7b 11 85 20 03 	vmovsd %xmm0,0x320(%r13)
+ 2c0:	00 00 
+ 2c2:	c4 c1 7b 11 85 38 06 	vmovsd %xmm0,0x638(%r13)
+ 2c9:	00 00 
+ 2cb:	c4 c1 7b 11 86 20 03 	vmovsd %xmm0,0x320(%r14)
+ 2d2:	00 00 
+ 2d4:	c4 c1 7b 11 86 38 06 	vmovsd %xmm0,0x638(%r14)
+ 2db:	00 00 
+ 2dd:	c4 c1 7b 11 84 24 20 	vmovsd %xmm0,0x320(%r12)
+ 2e4:	03 00 00 
+ 2e7:	c4 c1 7b 11 84 24 38 	vmovsd %xmm0,0x638(%r12)
+ 2ee:	06 00 00 
+ 2f1:	c4 c1 7b 11 87 20 03 	vmovsd %xmm0,0x320(%r15)
+ 2f8:	00 00 
+ 2fa:	c4 c1 7b 11 87 38 06 	vmovsd %xmm0,0x638(%r15)
+ 301:	00 00 
+ 303:	c5 fb 11 83 20 03 00 	vmovsd %xmm0,0x320(%rbx)
+ 30a:	00 
+ 30b:	c5 fb 11 83 38 06 00 	vmovsd %xmm0,0x638(%rbx)
+ 312:	00 
+ 313:	c4 c1 7b 11 85 40 06 	vmovsd %xmm0,0x640(%r13)
+ 31a:	00 00 
+ 31c:	c4 c1 7b 11 85 58 09 	vmovsd %xmm0,0x958(%r13)
+ 323:	00 00 
+ 325:	c4 c1 7b 11 86 40 06 	vmovsd %xmm0,0x640(%r14)
+ 32c:	00 00 
+ 32e:	c4 c1 7b 11 86 58 09 	vmovsd %xmm0,0x958(%r14)
+ 335:	00 00 
+ 337:	c4 c1 7b 11 84 24 40 	vmovsd %xmm0,0x640(%r12)
+ 33e:	06 00 00 
+ 341:	c4 c1 7b 11 84 24 58 	vmovsd %xmm0,0x958(%r12)
+ 348:	09 00 00 
+ 34b:	c4 c1 7b 11 87 40 06 	vmovsd %xmm0,0x640(%r15)
+ 352:	00 00 
+ 354:	c4 c1 7b 11 87 58 09 	vmovsd %xmm0,0x958(%r15)
+ 35b:	00 00 
+ 35d:	c5 fb 11 83 40 06 00 	vmovsd %xmm0,0x640(%rbx)
+ 364:	00 
+ 365:	c5 fb 11 83 58 09 00 	vmovsd %xmm0,0x958(%rbx)
+ 36c:	00 
+ 36d:	0f 1f 00             	nopl   (%rax)
+ 370:	c5 fb 11 04 c3       	vmovsd %xmm0,(%rbx,%rax,8)
+ 375:	c5 fb 11 84 c3 40 06 	vmovsd %xmm0,0x640(%rbx,%rax,8)
+ 37c:	00 00 
+ 37e:	c4 c1 7b 11 04 c7    	vmovsd %xmm0,(%r15,%rax,8)
+ 384:	c4 c1 7b 11 84 c7 40 	vmovsd %xmm0,0x640(%r15,%rax,8)
+ 38b:	06 00 00 
+ 38e:	c4 c1 7b 11 04 c4    	vmovsd %xmm0,(%r12,%rax,8)
+ 394:	c4 c1 7b 11 84 c4 40 	vmovsd %xmm0,0x640(%r12,%rax,8)
+ 39b:	06 00 00 
+ 39e:	c4 c1 7b 11 04 c6    	vmovsd %xmm0,(%r14,%rax,8)
+ 3a4:	c4 c1 7b 11 84 c6 40 	vmovsd %xmm0,0x640(%r14,%rax,8)
+ 3ab:	06 00 00 
+ 3ae:	c4 c1 7b 11 44 c5 00 	vmovsd %xmm0,0x0(%r13,%rax,8)
+ 3b5:	c4 c1 7b 11 84 c5 40 	vmovsd %xmm0,0x640(%r13,%rax,8)
+ 3bc:	06 00 00 
+ 3bf:	48 ff c0             	inc    %rax
+ 3c2:	48 83 f8 64          	cmp    $0x64,%rax
+ 3c6:	72 a8                	jb     370 <main+0x370>
+ 3c8:	bf 01 00 00 00       	mov    $0x1,%edi
+ 3cd:	48 8d 74 24 08       	lea    0x8(%rsp),%rsi
+ 3d2:	c7 04 24 01 00 00 00 	movl   $0x1,(%rsp)
+ 3d9:	c5 f8 77             	vzeroupper 
+ 3dc:	e8 00 00 00 00       	callq  3e1 <main+0x3e1>
+ 3e1:	c5 f9 57 c0          	vxorpd %xmm0,%xmm0,%xmm0
+ 3e5:	c5 f1 57 c9          	vxorpd %xmm1,%xmm1,%xmm1
+ 3e9:	c4 e1 fb 2a 44 24 10 	vcvtsi2sdq 0x10(%rsp),%xmm0,%xmm0
+ 3f0:	c4 e1 f3 2a 4c 24 08 	vcvtsi2sdq 0x8(%rsp),%xmm1,%xmm1
+ 3f7:	c5 fb 10 15 00 00 00 	vmovsd 0x0(%rip),%xmm2        # 3ff <main+0x3ff>
+ 3fe:	00 
+ 3ff:	c4 e2 f9 b9 ca       	vfmadd231sd %xmm2,%xmm0,%xmm1
+ 404:	4c 89 74 24 28       	mov    %r14,0x28(%rsp)
+ 409:	c5 fb 11 4c 24 30    	vmovsd %xmm1,0x30(%rsp)
+ 40f:	44 8b 34 24          	mov    (%rsp),%r14d
+ 413:	49 8b 85 38 06 00 00 	mov    0x638(%r13),%rax
+ 41a:	33 d2                	xor    %edx,%edx
+ 41c:	c5 fb 10 05 00 00 00 	vmovsd 0x0(%rip),%xmm0        # 424 <main+0x424>
+ 423:	00 
+ 424:	48 8b 74 24 28       	mov    0x28(%rsp),%rsi
+ 429:	33 c9                	xor    %ecx,%ecx
+ 42b:	c4 c1 7b 10 8c cd 20 	vmovsd 0x320(%r13,%rcx,8),%xmm1
+ 432:	03 00 00 
+ 435:	c5 fb 10 b4 ce 20 03 	vmovsd 0x320(%rsi,%rcx,8),%xmm6
+ 43c:	00 00 
+ 43e:	c4 41 7b 10 9c cc 20 	vmovsd 0x320(%r12,%rcx,8),%xmm11
+ 445:	03 00 00 
+ 448:	62 c1 ff 08 10 44 cf 	vmovsd 0x320(%r15,%rcx,8),%xmm16
+ 44f:	64 
+ 450:	62 e1 ff 08 10 6c cb 	vmovsd 0x320(%rbx,%rcx,8),%xmm21
+ 457:	64 
+ 458:	c4 c1 73 58 94 cd 48 	vaddsd 0x648(%r13,%rcx,8),%xmm1,%xmm2
+ 45f:	06 00 00 
+ 462:	c5 cb 58 bc ce 48 06 	vaddsd 0x648(%rsi,%rcx,8),%xmm6,%xmm7
+ 469:	00 00 
+ 46b:	c4 41 23 58 a4 cc 48 	vaddsd 0x648(%r12,%rcx,8),%xmm11,%xmm12
+ 472:	06 00 00 
+ 475:	62 c1 ff 00 58 8c cf 	vaddsd 0x648(%r15,%rcx,8),%xmm16,%xmm17
+ 47c:	48 06 00 00 
+ 480:	62 e1 d7 00 58 b4 cb 	vaddsd 0x648(%rbx,%rcx,8),%xmm21,%xmm22
+ 487:	48 06 00 00 
+ 48b:	c4 c1 6b 58 9c cd 30 	vaddsd 0x330(%r13,%rcx,8),%xmm2,%xmm3
+ 492:	03 00 00 
+ 495:	c5 43 58 84 ce 30 03 	vaddsd 0x330(%rsi,%rcx,8),%xmm7,%xmm8
+ 49c:	00 00 
+ 49e:	c4 41 1b 58 ac cc 30 	vaddsd 0x330(%r12,%rcx,8),%xmm12,%xmm13
+ 4a5:	03 00 00 
+ 4a8:	62 c1 f7 00 58 54 cf 	vaddsd 0x330(%r15,%rcx,8),%xmm17,%xmm18
+ 4af:	66 
+ 4b0:	62 e1 cf 00 58 7c cb 	vaddsd 0x330(%rbx,%rcx,8),%xmm22,%xmm23
+ 4b7:	66 
+ 4b8:	c4 c1 63 58 64 cd 08 	vaddsd 0x8(%r13,%rcx,8),%xmm3,%xmm4
+ 4bf:	c5 3b 58 4c ce 08    	vaddsd 0x8(%rsi,%rcx,8),%xmm8,%xmm9
+ 4c5:	c4 41 13 58 74 cc 08 	vaddsd 0x8(%r12,%rcx,8),%xmm13,%xmm14
+ 4cc:	62 c1 ef 00 58 5c cf 	vaddsd 0x8(%r15,%rcx,8),%xmm18,%xmm19
+ 4d3:	01 
+ 4d4:	62 61 c7 00 58 44 cb 	vaddsd 0x8(%rbx,%rcx,8),%xmm23,%xmm24
+ 4db:	01 
+ 4dc:	c5 fb 59 ec          	vmulsd %xmm4,%xmm0,%xmm5
+ 4e0:	c4 41 7b 59 d1       	vmulsd %xmm9,%xmm0,%xmm10
+ 4e5:	c4 41 7b 59 fe       	vmulsd %xmm14,%xmm0,%xmm15
+ 4ea:	62 a1 ff 08 59 e3    	vmulsd %xmm19,%xmm0,%xmm20
+ 4f0:	62 01 ff 08 59 c8    	vmulsd %xmm24,%xmm0,%xmm25
+ 4f6:	c4 c1 7b 11 ac cd 28 	vmovsd %xmm5,0x328(%r13,%rcx,8)
+ 4fd:	03 00 00 
+ 500:	c5 7b 11 94 ce 28 03 	vmovsd %xmm10,0x328(%rsi,%rcx,8)
+ 507:	00 00 
+ 509:	c4 41 7b 11 bc cc 28 	vmovsd %xmm15,0x328(%r12,%rcx,8)
+ 510:	03 00 00 
+ 513:	62 c1 ff 08 11 64 cf 	vmovsd %xmm20,0x328(%r15,%rcx,8)
+ 51a:	65 
+ 51b:	62 61 ff 08 11 4c cb 	vmovsd %xmm25,0x328(%rbx,%rcx,8)
+ 522:	65 
+ 523:	48 ff c1             	inc    %rcx
+ 526:	48 83 f9 62          	cmp    $0x62,%rcx
+ 52a:	0f 82 fb fe ff ff    	jb     42b <main+0x42b>
+ 530:	ff c2                	inc    %edx
+ 532:	48 8b 8e 38 06 00 00 	mov    0x638(%rsi),%rcx
+ 539:	4d 8b 84 24 38 06 00 	mov    0x638(%r12),%r8
+ 540:	00 
+ 541:	4d 8b 8f 38 06 00 00 	mov    0x638(%r15),%r9
+ 548:	4c 8b 93 38 06 00 00 	mov    0x638(%rbx),%r10
+ 54f:	49 89 85 20 03 00 00 	mov    %rax,0x320(%r13)
+ 556:	48 89 8e 40 06 00 00 	mov    %rcx,0x640(%rsi)
+ 55d:	4d 89 84 24 40 06 00 	mov    %r8,0x640(%r12)
+ 564:	00 
+ 565:	4d 89 8f 40 06 00 00 	mov    %r9,0x640(%r15)
+ 56c:	4c 89 93 40 06 00 00 	mov    %r10,0x640(%rbx)
+ 573:	41 3b d6             	cmp    %r14d,%edx
+ 576:	0f 82 ad fe ff ff    	jb     429 <main+0x429>
+ 57c:	bf 01 00 00 00       	mov    $0x1,%edi
+ 581:	48 8d 74 24 18       	lea    0x18(%rsp),%rsi
+ 586:	e8 00 00 00 00       	callq  58b <main+0x58b>
+ 58b:	c5 f9 57 c0          	vxorpd %xmm0,%xmm0,%xmm0
+ 58f:	62 a1 fd 00 57 c0    	vxorpd %xmm16,%xmm16,%xmm16
+ 595:	c4 e1 fb 2a 44 24 20 	vcvtsi2sdq 0x20(%rsp),%xmm0,%xmm0
+ 59c:	62 e1 ff 00 2a 44 24 	vcvtsi2sd 0x18(%rsp),%xmm16,%xmm16
+ 5a3:	03 
+ 5a4:	62 e2 fd 08 b9 05 00 	vfmadd231sd 0x0(%rip),%xmm0,%xmm16        # 5ae <main+0x5ae>
+ 5ab:	00 00 00 
+ 5ae:	45 03 f6             	add    %r14d,%r14d
+ 5b1:	c5 fb 10 0d 00 00 00 	vmovsd 0x0(%rip),%xmm1        # 5b9 <main+0x5b9>
+ 5b8:	00 
+ 5b9:	62 f1 ff 00 5c 44 24 	vsubsd 0x30(%rsp),%xmm16,%xmm0
+ 5c0:	06 
+ 5c1:	c5 f9 2f c8          	vcomisd %xmm0,%xmm1
+ 5c5:	76 4a                	jbe    611 <main+0x611>
+ 5c7:	bf 01 00 00 00       	mov    $0x1,%edi
+ 5cc:	48 8d 74 24 08       	lea    0x8(%rsp),%rsi
+ 5d1:	e8 00 00 00 00       	callq  5d6 <main+0x5d6>
+ 5d6:	c5 f9 57 c0          	vxorpd %xmm0,%xmm0,%xmm0
+ 5da:	c5 f1 57 c9          	vxorpd %xmm1,%xmm1,%xmm1
+ 5de:	c4 e1 fb 2a 44 24 10 	vcvtsi2sdq 0x10(%rsp),%xmm0,%xmm0
+ 5e5:	c4 e1 f3 2a 4c 24 08 	vcvtsi2sdq 0x8(%rsp),%xmm1,%xmm1
+ 5ec:	c4 e2 f9 b9 0d 00 00 	vfmadd231sd 0x0(%rip),%xmm0,%xmm1        # 5f5 <main+0x5f5>
+ 5f3:	00 00 
+ 5f5:	c5 fb 11 4c 24 30    	vmovsd %xmm1,0x30(%rsp)
+ 5fb:	45 85 f6             	test   %r14d,%r14d
+ 5fe:	0f 8e 78 ff ff ff    	jle    57c <main+0x57c>
+ 604:	e9 0a fe ff ff       	jmpq   413 <main+0x413>
+ 609:	45 33 ed             	xor    %r13d,%r13d
+ 60c:	e9 93 fb ff ff       	jmpq   1a4 <main+0x1a4>
+ 611:	44 89 34 24          	mov    %r14d,(%rsp)
+ 615:	c5 f1 57 c9          	vxorpd %xmm1,%xmm1,%xmm1
+ 619:	44 89 f1             	mov    %r14d,%ecx
+ 61c:	89 ca                	mov    %ecx,%edx
+ 61e:	c1 ea 1f             	shr    $0x1f,%edx
+ 621:	bf 00 00 00 00       	mov    $0x0,%edi
+ 626:	03 ca                	add    %edx,%ecx
+ 628:	b8 01 00 00 00       	mov    $0x1,%eax
+ 62d:	d1 f9                	sar    %ecx
+ 62f:	c5 f3 2a c9          	vcvtsi2sd %ecx,%xmm1,%xmm1
+ 633:	c5 fb 59 05 00 00 00 	vmulsd 0x0(%rip),%xmm0,%xmm0        # 63b <main+0x63b>
+ 63a:	00 
+ 63b:	c5 fb 5e c1          	vdivsd %xmm1,%xmm0,%xmm0
+ 63f:	4c 8b 74 24 28       	mov    0x28(%rsp),%r14
+ 644:	e8 00 00 00 00       	callq  649 <main+0x649>
+ 649:	4c 89 ef             	mov    %r13,%rdi
+ 64c:	e8 00 00 00 00       	callq  651 <main+0x651>
+ 651:	4c 89 f7             	mov    %r14,%rdi
+ 654:	e8 00 00 00 00       	callq  659 <main+0x659>
+ 659:	4c 89 e7             	mov    %r12,%rdi
+ 65c:	e8 00 00 00 00       	callq  661 <main+0x661>
+ 661:	4c 89 ff             	mov    %r15,%rdi
+ 664:	e8 00 00 00 00       	callq  669 <main+0x669>
+ 669:	48 89 df             	mov    %rbx,%rdi
+ 66c:	e8 00 00 00 00       	callq  671 <main+0x671>
+ 671:	33 c0                	xor    %eax,%eax
+ 673:	48 83 c4 58          	add    $0x58,%rsp
+ 677:	5b                   	pop    %rbx
+ 678:	41 5f                	pop    %r15
+ 67a:	41 5e                	pop    %r14
+ 67c:	41 5d                	pop    %r13
+ 67e:	41 5c                	pop    %r12
+ 680:	48 89 ec             	mov    %rbp,%rsp
+ 683:	5d                   	pop    %rbp
+ 684:	c3                   	retq   
+ 685:	45 33 e4             	xor    %r12d,%r12d
+ 688:	e9 6b fb ff ff       	jmpq   1f8 <main+0x1f8>
+ 68d:	0f 1f 00             	nopl   (%rax)
+
+0000000000000690 <_Z12getTimeStampv>:
+ 690:	48 83 ec 18          	sub    $0x18,%rsp
+ 694:	bf 01 00 00 00       	mov    $0x1,%edi
+ 699:	48 8d 34 24          	lea    (%rsp),%rsi
+ 69d:	e8 00 00 00 00       	callq  6a2 <_Z12getTimeStampv+0x12>
+ 6a2:	c5 f9 57 c0          	vxorpd %xmm0,%xmm0,%xmm0
+ 6a6:	c5 f1 57 c9          	vxorpd %xmm1,%xmm1,%xmm1
+ 6aa:	c4 e1 fb 2a 44 24 08 	vcvtsi2sdq 0x8(%rsp),%xmm0,%xmm0
+ 6b1:	c4 e1 f3 2a 0c 24    	vcvtsi2sdq (%rsp),%xmm1,%xmm1
+ 6b7:	c4 e2 f1 99 05 00 00 	vfmadd132sd 0x0(%rip),%xmm1,%xmm0        # 6c0 <_Z12getTimeStampv+0x30>
+ 6be:	00 00 
+ 6c0:	48 83 c4 18          	add    $0x18,%rsp
+ 6c4:	c3                   	retq   
+ 6c5:	0f 1f 40 00          	nopl   0x0(%rax)
+ 6c9:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+00000000000006d0 <_Z17getTimeResolutionv>:
+ 6d0:	48 83 ec 18          	sub    $0x18,%rsp
+ 6d4:	bf 01 00 00 00       	mov    $0x1,%edi
+ 6d9:	48 8d 34 24          	lea    (%rsp),%rsi
+ 6dd:	e8 00 00 00 00       	callq  6e2 <_Z17getTimeResolutionv+0x12>
+ 6e2:	c5 f9 57 c0          	vxorpd %xmm0,%xmm0,%xmm0
+ 6e6:	c5 f1 57 c9          	vxorpd %xmm1,%xmm1,%xmm1
+ 6ea:	c4 e1 fb 2a 44 24 08 	vcvtsi2sdq 0x8(%rsp),%xmm0,%xmm0
+ 6f1:	c4 e1 f3 2a 0c 24    	vcvtsi2sdq (%rsp),%xmm1,%xmm1
+ 6f7:	c4 e2 f1 99 05 00 00 	vfmadd132sd 0x0(%rip),%xmm1,%xmm0        # 700 <_Z17getTimeResolutionv+0x30>
+ 6fe:	00 00 
+ 700:	48 83 c4 18          	add    $0x18,%rsp
+ 704:	c3                   	retq   
+ 705:	0f 1f 40 00          	nopl   0x0(%rax)
+ 709:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+0000000000000710 <_Z13getTimeStamp_v>:
+ 710:	48 83 ec 18          	sub    $0x18,%rsp
+ 714:	bf 01 00 00 00       	mov    $0x1,%edi
+ 719:	48 8d 34 24          	lea    (%rsp),%rsi
+ 71d:	e8 00 00 00 00       	callq  722 <_Z13getTimeStamp_v+0x12>
+ 722:	c5 f9 57 c0          	vxorpd %xmm0,%xmm0,%xmm0
+ 726:	c5 f1 57 c9          	vxorpd %xmm1,%xmm1,%xmm1
+ 72a:	c4 e1 fb 2a 44 24 08 	vcvtsi2sdq 0x8(%rsp),%xmm0,%xmm0
+ 731:	c4 e1 f3 2a 0c 24    	vcvtsi2sdq (%rsp),%xmm1,%xmm1
+ 737:	c4 e2 f1 99 05 00 00 	vfmadd132sd 0x0(%rip),%xmm1,%xmm0        # 740 <_Z13getTimeStamp_v+0x30>
+ 73e:	00 00 
+ 740:	48 83 c4 18          	add    $0x18,%rsp
+ 744:	c3                   	retq   
+ 745:	0f 1f 40 00          	nopl   0x0(%rax)
+ 749:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+0000000000000750 <_Z13gettimestamp_v>:
+ 750:	48 83 ec 18          	sub    $0x18,%rsp
+ 754:	bf 01 00 00 00       	mov    $0x1,%edi
+ 759:	48 8d 34 24          	lea    (%rsp),%rsi
+ 75d:	e8 00 00 00 00       	callq  762 <_Z13gettimestamp_v+0x12>
+ 762:	c5 f9 57 c0          	vxorpd %xmm0,%xmm0,%xmm0
+ 766:	c5 f1 57 c9          	vxorpd %xmm1,%xmm1,%xmm1
+ 76a:	c4 e1 fb 2a 44 24 08 	vcvtsi2sdq 0x8(%rsp),%xmm0,%xmm0
+ 771:	c4 e1 f3 2a 0c 24    	vcvtsi2sdq (%rsp),%xmm1,%xmm1
+ 777:	c4 e2 f1 99 05 00 00 	vfmadd132sd 0x0(%rip),%xmm1,%xmm0        # 780 <_Z13gettimestamp_v+0x30>
+ 77e:	00 00 
+ 780:	48 83 c4 18          	add    $0x18,%rsp
+ 784:	c3                   	retq   
+ 785:	0f 1f 40 00          	nopl   0x0(%rax)
+ 789:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+0000000000000790 <_Z5dummyPd>:
+ 790:	c3                   	retq   
+ 791:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+ 798:	00 
+ 799:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+00000000000007a0 <_Z24perfevent_paranoid_valuev>:
+ 7a0:	53                   	push   %rbx
+ 7a1:	55                   	push   %rbp
+ 7a2:	48 83 ec 68          	sub    $0x68,%rsp
+ 7a6:	bf 00 00 00 00       	mov    $0x0,%edi
+ 7ab:	be 00 00 00 00       	mov    $0x0,%esi
+ 7b0:	bd 03 00 00 00       	mov    $0x3,%ebp
+ 7b5:	e8 00 00 00 00       	callq  7ba <_Z24perfevent_paranoid_valuev+0x1a>
+ 7ba:	48 89 c3             	mov    %rax,%rbx
+ 7bd:	48 85 db             	test   %rbx,%rbx
+ 7c0:	74 3e                	je     800 <_Z24perfevent_paranoid_valuev+0x60>
+ 7c2:	be 01 00 00 00       	mov    $0x1,%esi
+ 7c7:	48 8d 3c 24          	lea    (%rsp),%rdi
+ 7cb:	ba 64 00 00 00       	mov    $0x64,%edx
+ 7d0:	48 89 d9             	mov    %rbx,%rcx
+ 7d3:	e8 00 00 00 00       	callq  7d8 <_Z24perfevent_paranoid_valuev+0x38>
+ 7d8:	48 85 c0             	test   %rax,%rax
+ 7db:	76 12                	jbe    7ef <_Z24perfevent_paranoid_valuev+0x4f>
+ 7dd:	33 f6                	xor    %esi,%esi
+ 7df:	48 8d 3c 24          	lea    (%rsp),%rdi
+ 7e3:	ba 0a 00 00 00       	mov    $0xa,%edx
+ 7e8:	e8 00 00 00 00       	callq  7ed <_Z24perfevent_paranoid_valuev+0x4d>
+ 7ed:	89 c5                	mov    %eax,%ebp
+ 7ef:	48 89 df             	mov    %rbx,%rdi
+ 7f2:	e8 00 00 00 00       	callq  7f7 <_Z24perfevent_paranoid_valuev+0x57>
+ 7f7:	89 e8                	mov    %ebp,%eax
+ 7f9:	48 83 c4 68          	add    $0x68,%rsp
+ 7fd:	5d                   	pop    %rbp
+ 7fe:	5b                   	pop    %rbx
+ 7ff:	c3                   	retq   
+ 800:	e8 00 00 00 00       	callq  805 <_Z24perfevent_paranoid_valuev+0x65>
+ 805:	c7 00 01 00 00 00    	movl   $0x1,(%rax)
+ 80b:	e8 00 00 00 00       	callq  810 <_Z24perfevent_paranoid_valuev+0x70>
+ 810:	be 00 00 00 00       	mov    $0x0,%esi
+ 815:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 81c <_Z24perfevent_paranoid_valuev+0x7c>
+ 81c:	8b 10                	mov    (%rax),%edx
+ 81e:	33 c0                	xor    %eax,%eax
+ 820:	e8 00 00 00 00       	callq  825 <_Z24perfevent_paranoid_valuev+0x85>
+ 825:	b8 03 00 00 00       	mov    $0x3,%eax
+ 82a:	48 83 c4 68          	add    $0x68,%rsp
+ 82e:	5d                   	pop    %rbp
+ 82f:	5b                   	pop    %rbx
+ 830:	c3                   	retq   
+ 831:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+ 838:	00 
+ 839:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+0000000000000840 <_Z15init_perf_eventP15perf_event_attr>:
+ 840:	41 57                	push   %r15
+ 842:	33 f6                	xor    %esi,%esi
+ 844:	ba 78 00 00 00       	mov    $0x78,%edx
+ 849:	49 89 ff             	mov    %rdi,%r15
+ 84c:	e8 00 00 00 00       	callq  851 <_Z15init_perf_eventP15perf_event_attr+0x11>
+ 851:	33 d2                	xor    %edx,%edx
+ 853:	b9 ff ff ff ff       	mov    $0xffffffff,%ecx
+ 858:	bf 2a 01 00 00       	mov    $0x12a,%edi
+ 85d:	4c 89 fe             	mov    %r15,%rsi
+ 860:	41 89 c8             	mov    %ecx,%r8d
+ 863:	45 33 c9             	xor    %r9d,%r9d
+ 866:	33 c0                	xor    %eax,%eax
+ 868:	41 c7 47 04 78 00 00 	movl   $0x78,0x4(%r15)
+ 86f:	00 
+ 870:	41 80 4f 28 21       	orb    $0x21,0x28(%r15)
+ 875:	41 c7 07 00 00 00 00 	movl   $0x0,(%r15)
+ 87c:	49 c7 47 08 00 00 00 	movq   $0x0,0x8(%r15)
+ 883:	00 
+ 884:	e8 00 00 00 00       	callq  889 <_Z15init_perf_eventP15perf_event_attr+0x49>
+ 889:	85 c0                	test   %eax,%eax
+ 88b:	7c 03                	jl     890 <_Z15init_perf_eventP15perf_event_attr+0x50>
+ 88d:	41 5f                	pop    %r15
+ 88f:	c3                   	retq   
+ 890:	be 00 00 00 00       	mov    $0x0,%esi
+ 895:	89 c2                	mov    %eax,%edx
+ 897:	33 c0                	xor    %eax,%eax
+ 899:	48 8b 3d 00 00 00 00 	mov    0x0(%rip),%rdi        # 8a0 <_Z15init_perf_eventP15perf_event_attr+0x60>
+ 8a0:	e8 00 00 00 00       	callq  8a5 <_Z15init_perf_eventP15perf_event_attr+0x65>
+ 8a5:	bf 01 00 00 00       	mov    $0x1,%edi
+ 8aa:	e8 00 00 00 00       	callq  8af <_Z15init_perf_eventP15perf_event_attr+0x6f>
+ 8af:	90                   	nop

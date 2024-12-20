@@ -217,22 +217,27 @@ Disassembly of section .text:
  363:	00 
  364:	be 01 00 00 00       	mov    $0x1,%esi
  369:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+ START
+ 0
  370:	c4 c1 7b 10 8c f6 18 	vmovsd 0x318(%r14,%rsi,8),%xmm1
  377:	03 00 00 
  37a:	c4 c1 7b 10 b4 f7 18 	vmovsd 0x318(%r15,%rsi,8),%xmm6
  381:	03 00 00 
  384:	c4 c1 73 58 94 f6 40 	vaddsd 0x640(%r14,%rsi,8),%xmm1,%xmm2
  38b:	06 00 00 
+ 1
  38e:	c4 c1 4b 58 bc f7 40 	vaddsd 0x640(%r15,%rsi,8),%xmm6,%xmm7
  395:	06 00 00 
  398:	c4 c1 6b 58 9c f6 28 	vaddsd 0x328(%r14,%rsi,8),%xmm2,%xmm3
  39f:	03 00 00 
  3a2:	c4 41 43 58 84 f7 28 	vaddsd 0x328(%r15,%rsi,8),%xmm7,%xmm8
  3a9:	03 00 00 
+ 2
  3ac:	c4 c1 63 58 24 f6    	vaddsd (%r14,%rsi,8),%xmm3,%xmm4
  3b2:	c4 41 3b 58 0c f7    	vaddsd (%r15,%rsi,8),%xmm8,%xmm9
  3b8:	c5 fb 59 ec          	vmulsd %xmm4,%xmm0,%xmm5
  3bc:	c4 41 7b 59 d1       	vmulsd %xmm9,%xmm0,%xmm10
+ 3
  3c1:	c4 c1 7b 11 ac f6 20 	vmovsd %xmm5,0x320(%r14,%rsi,8)
  3c8:	03 00 00 
  3cb:	c4 41 7b 11 94 f7 20 	vmovsd %xmm10,0x320(%r15,%rsi,8)
@@ -240,6 +245,8 @@ Disassembly of section .text:
  3d5:	48 ff c6             	inc    %rsi
  3d8:	48 83 fe 63          	cmp    $0x63,%rsi
  3dc:	7c 92                	jl     370 <main+0x370>
+ 4
+ END
  3de:	ff c1                	inc    %ecx
  3e0:	49 8b b6 38 06 00 00 	mov    0x638(%r14),%rsi
  3e7:	4d 8b 87 38 06 00 00 	mov    0x638(%r15),%r8

@@ -274,12 +274,15 @@ Disassembly of section .text:
  407:	c5 fb 10 05 00 00 00 	vmovsd 0x0(%rip),%xmm0        # 40f <main+0x40f>
  40e:	00 
  40f:	be 01 00 00 00       	mov    $0x1,%esi
+ START
+ 0
  414:	c4 c1 7b 10 8c f4 18 	vmovsd 0x318(%r12,%rsi,8),%xmm1
  41b:	03 00 00 
  41e:	c4 c1 73 58 94 f4 40 	vaddsd 0x640(%r12,%rsi,8),%xmm1,%xmm2
  425:	06 00 00 
  428:	c4 c1 6b 58 9c f4 28 	vaddsd 0x328(%r12,%rsi,8),%xmm2,%xmm3
  42f:	03 00 00 
+ 1
  432:	c4 c1 63 58 24 f4    	vaddsd (%r12,%rsi,8),%xmm3,%xmm4
  438:	c5 fb 59 ec          	vmulsd %xmm4,%xmm0,%xmm5
  43c:	c4 c1 7b 11 ac f4 20 	vmovsd %xmm5,0x320(%r12,%rsi,8)
@@ -287,6 +290,8 @@ Disassembly of section .text:
  446:	48 ff c6             	inc    %rsi
  449:	48 83 fe 63          	cmp    $0x63,%rsi
  44d:	7c c5                	jl     414 <main+0x414>
+ 2
+ END
  44f:	ff c1                	inc    %ecx
  451:	49 8b b4 24 38 06 00 	mov    0x638(%r12),%rsi
  458:	00 

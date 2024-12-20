@@ -1,0 +1,35 @@
+Using a kernel with high theoretical throughput to investigate wether frontend limitations become visible on Ice Lake Server architecture.
+NI chosen to result in workingset size approximatley 3/4 of L1-instruction cache size(32KiB https://en.wikichip.org/wiki/intel/microarchitectures/ice_lake_(server) ).
+Potential intel tool for self verification: https://www.intel.com/content/www/us/en/support/articles/000057727/processors.html.
+Test is run with  "srun --cpu-freq=2400000-2400000:performance ./frontendThroughputTest 800 2400000" on singlenode partition on fritz.
+Benchmark files: ./frontendThroughoutTest*/.cpp/.s
+
+Some Benchmark results:
+NI = 800, size = 25.00KiB, CPU Frequency = 2.40GHz
+Cycles calculated per high-level iteration: 1.976732
+Throughput of non loop-instructions caclulated: 3.04
+ Total walltime: 0.000001s
+NI = 800, size = 25.00KiB, CPU Frequency = 2.40GHz
+Cycles calculated per high-level iteration: 1.961365
+Throughput of non loop-instructions caclulated: 3.06
+ Total walltime: 0.000001s
+NI = 800, size = 25.00KiB, CPU Frequency = 2.40GHz
+Cycles calculated per high-level iteration: 2.046581
+Throughput of non loop-instructions caclulated: 2.93
+ Total walltime: 0.000001s
+NI = 800, size = 25.00KiB, CPU Frequency = 2.40GHz
+Cycles calculated per high-level iteration: 2.409797
+Throughput of non loop-instructions caclulated: 2.49
+ Total walltime: 0.000001s
+NI = 800, size = 25.00KiB, CPU Frequency = 2.40GHz
+Cycles calculated per high-level iteration: 1.997687
+Throughput of non loop-instructions caclulated: 3.00
+ Total walltime: 0.000001s
+NI = 800, size = 25.00KiB, CPU Frequency = 2.40GHz
+Cycles calculated per high-level iteration: 2.075918
+Throughput of non loop-instructions caclulated: 2.89
+ Total walltime: 0.000001s
+NI = 800, size = 25.00KiB, CPU Frequency = 2.40GHz
+Cycles calculated per high-level iteration: 2.358109
+Throughput of non loop-instructions caclulated: 2.54
+ Total walltime: 0.000001s
