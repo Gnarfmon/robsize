@@ -1,0 +1,843 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) C Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.10.0 Build 20230609_000000
+
+Compiler options: -Wl,-rpath,/apps/SPACK/0.19.1/opt/linux-almalinux8-icelake/gcc-8.5.0/intel-oneapi-compilers-2023.2.1-axze7ocbc5zpklxb6kr5h2d5hbpf2lxk/compiler/2023.2.1/linux/lib -Wl,-rpath,/apps/SPACK/0.19.1/opt/linux-almalinux8-icelake/gcc-8.5.0/intel-oneapi-compilers-2023.2.1-axze7ocbc5zpklxb6kr5h2d5hbpf2lxk/compiler/2023.2.1/linux/lib/x64 -Wl,-rpath,/apps/SPACK/0.19.1/opt/linux-almalinux8-icelake/gcc-8.5.0/intel-oneapi-compilers-2023.2.1-axze7ocbc5zpklxb6kr5h2d5hbpf2lxk/compiler/2023.2.1/linux/lib/oclfpga/host/linux64/lib -Wl,-rpath,/apps/SPACK/0.19.1/opt/linux-almalinux8-icelake/gcc-8.5.0/intel-oneapi-compilers-2023.2.1-axze7ocbc5zpklxb6kr5h2d5hbpf2lxk/compiler/2023.2.1/linux/lib/oclfpga/linux64/lib -Wl,-rpath,/apps/SPACK/0.19.1/opt/linux-almalinux8-icelake/gcc-8.5.0/intel-oneapi-compilers-2023.2.1-axze7ocbc5zpklxb6kr5h2d5hbpf2lxk/compiler/2023.2.1/linux/compiler/lib/intel64_lin -gcc-name=/usr/bin/gcc -gxx-name=/usr/bin/g++ -Ofast -qopenmp-simd -xHost -qopt-zmm-usage=low -fargument-noalias -funroll-loops -fno-builtin -diag-disable=all -qopt-report=5 -qopt-report-file=./tmp_multiarray/icx/multiarray_icx35.optrpt -o ./tmp_multiarray/icx/multiarray_icx35
+
+    Report from: Interprocedural optimizations [ipo]
+
+  WHOLE PROGRAM (SAFE) [EITHER METHOD]: false
+  WHOLE PROGRAM (SEEN) [TABLE METHOD]: false
+  WHOLE PROGRAM (READ) [OBJECT READER METHOD]: false
+
+INLINING OPTION VALUES:
+  -inline-factor: 100
+  -inline-min-size: 30
+  -inline-max-size: 230
+  -inline-max-total-size: 2000
+  -inline-max-per-routine: 10000
+  -inline-max-per-compile: 500000
+
+In the inlining report below:
+   "sz" refers to the "size" of the routine. The smaller a routine's size,
+      the more likely it is to be inlined.
+   "isz" refers to the "inlined size" of the routine. This is the amount
+      the calling routine will grow if the called routine is inlined into it.
+      The compiler generally limits the amount a routine can grow by having
+      routines inlined into it.
+
+Begin optimization report for: main(int, char **)
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (main(int, char **)) [1/10=10.0%] ./tmp_multiarray/icx/multiarray_icx.cpp(9,33)
+  -> EXTERN: (23,12) operator new[](unsigned long)
+  -> EXTERN: (24,13) operator new[](unsigned long)
+  -> EXTERN: (25,13) operator new[](unsigned long)
+  -> EXTERN: (26,13) operator new[](unsigned long)
+  -> EXTERN: (27,13) operator new[](unsigned long)
+  -> EXTERN: (28,13) operator new[](unsigned long)
+  -> EXTERN: (29,13) operator new[](unsigned long)
+  -> EXTERN: (30,13) operator new[](unsigned long)
+  -> EXTERN: (31,13) operator new[](unsigned long)
+  -> EXTERN: (32,13) operator new[](unsigned long)
+  -> EXTERN: (33,13) operator new[](unsigned long)
+  -> EXTERN: (34,13) operator new[](unsigned long)
+  -> EXTERN: (35,13) operator new[](unsigned long)
+  -> EXTERN: (36,13) operator new[](unsigned long)
+  -> EXTERN: (37,13) operator new[](unsigned long)
+  -> EXTERN: (38,13) operator new[](unsigned long)
+  -> EXTERN: (39,13) operator new[](unsigned long)
+  -> EXTERN: (40,13) operator new[](unsigned long)
+  -> EXTERN: (41,13) operator new[](unsigned long)
+  -> EXTERN: (42,13) operator new[](unsigned long)
+  -> EXTERN: (43,13) operator new[](unsigned long)
+  -> EXTERN: (44,13) operator new[](unsigned long)
+  -> EXTERN: (45,13) operator new[](unsigned long)
+  -> EXTERN: (46,13) operator new[](unsigned long)
+  -> EXTERN: (47,13) operator new[](unsigned long)
+  -> EXTERN: (48,13) operator new[](unsigned long)
+  -> EXTERN: (49,13) operator new[](unsigned long)
+  -> EXTERN: (50,12) operator new[](unsigned long)
+  -> EXTERN: (51,12) operator new[](unsigned long)
+  -> EXTERN: (52,12) operator new[](unsigned long)
+  -> EXTERN: (53,12) operator new[](unsigned long)
+  -> EXTERN: (54,12) operator new[](unsigned long)
+  -> EXTERN: (55,12) operator new[](unsigned long)
+  -> EXTERN: (56,12) operator new[](unsigned long)
+  -> EXTERN: (57,12) operator new[](unsigned long)
+  -> EXTERN: (58,12) operator new[](unsigned long)
+  -> INLINE: (258,17) getTimeStamp() (isz = 8) (sz = 13)
+    -> EXTERN: /home/hpc/muco/muco124h/Bachelor/other/ce_project/dep/timing.cpp:(6,3) clock_gettime(clockid_t, timespec *)
+  -> INLINE: (346,15) getTimeStamp() (isz = 8) (sz = 13)
+    -> EXTERN: /home/hpc/muco/muco124h/Bachelor/other/ce_project/dep/timing.cpp:(6,3) clock_gettime(clockid_t, timespec *)
+  -> EXTERN: (354,17) printf(const char *, ...)
+  -> EXTERN: (356,3) printf(const char *, ...)
+  -> EXTERN: (357,3) operator delete[](void *)
+  -> EXTERN: (358,1) operator delete[](void *)
+  -> EXTERN: (359,1) operator delete[](void *)
+  -> EXTERN: (360,1) operator delete[](void *)
+  -> EXTERN: (361,1) operator delete[](void *)
+  -> EXTERN: (362,1) operator delete[](void *)
+  -> EXTERN: (363,1) operator delete[](void *)
+  -> EXTERN: (364,1) operator delete[](void *)
+  -> EXTERN: (365,1) operator delete[](void *)
+  -> EXTERN: (366,1) operator delete[](void *)
+  -> EXTERN: (367,1) operator delete[](void *)
+  -> EXTERN: (368,1) operator delete[](void *)
+  -> EXTERN: (369,1) operator delete[](void *)
+  -> EXTERN: (370,1) operator delete[](void *)
+  -> EXTERN: (371,1) operator delete[](void *)
+  -> EXTERN: (372,1) operator delete[](void *)
+  -> EXTERN: (373,1) operator delete[](void *)
+  -> EXTERN: (374,1) operator delete[](void *)
+  -> EXTERN: (375,1) operator delete[](void *)
+  -> EXTERN: (376,1) operator delete[](void *)
+  -> EXTERN: (377,1) operator delete[](void *)
+  -> EXTERN: (378,1) operator delete[](void *)
+  -> EXTERN: (379,1) operator delete[](void *)
+  -> EXTERN: (380,1) operator delete[](void *)
+  -> EXTERN: (381,1) operator delete[](void *)
+  -> EXTERN: (382,1) operator delete[](void *)
+  -> EXTERN: (383,1) operator delete[](void *)
+  -> EXTERN: (384,1) operator delete[](void *)
+  -> EXTERN: (385,1) operator delete[](void *)
+  -> EXTERN: (386,1) operator delete[](void *)
+  -> EXTERN: (387,1) operator delete[](void *)
+  -> EXTERN: (388,1) operator delete[](void *)
+  -> EXTERN: (389,1) operator delete[](void *)
+  -> EXTERN: (390,1) operator delete[](void *)
+  -> EXTERN: (391,1) operator delete[](void *)
+  -> EXTERN: (392,1) operator delete[](void *)
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at ./tmp_multiarray/icx/multiarray_icx.cpp(62,3)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at ./tmp_multiarray/icx/multiarray_icx.cpp(63,5)
+   <Distributed chunk1>
+      remark #25426: Loop Distributed (5 way) 
+      remark #15389: vectorization support: reference phi[i][k] has unaligned access   [ ./tmp_multiarray/icx/multiarray_icx.cpp(64,7) ]
+      remark #15389: vectorization support: reference phi_35[i][k] has unaligned access   [ ./tmp_multiarray/icx/multiarray_icx.cpp(65,1) ]
+      remark #15389: vectorization support: reference phi_34[i][k] has unaligned access   [ ./tmp_multiarray/icx/multiarray_icx.cpp(66,1) ]
+      remark #15389: vectorization support: reference phi_33[i][k] has unaligned access   [ ./tmp_multiarray/icx/multiarray_icx.cpp(67,1) ]
+      remark #15389: vectorization support: reference phi_32[i][k] has unaligned access   [ ./tmp_multiarray/icx/multiarray_icx.cpp(68,1) ]
+      remark #15389: vectorization support: reference phi_31[i][k] has unaligned access   [ ./tmp_multiarray/icx/multiarray_icx.cpp(69,1) ]
+      remark #15389: vectorization support: reference phi_30[i][k] has unaligned access   [ ./tmp_multiarray/icx/multiarray_icx.cpp(70,1) ]
+      remark #15389: vectorization support: reference phi_29[i][k] has unaligned access   [ ./tmp_multiarray/icx/multiarray_icx.cpp(71,1) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 0.600
+      remark #15301: PARTIAL LOOP WAS VECTORIZED
+      remark #15451: unmasked unaligned unit stride stores: 8 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 25 
+      remark #15477: vector cost: 10.000 
+      remark #15478: estimated potential speedup: 2.440 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=25
+   LOOP END
+
+   LOOP BEGIN at ./tmp_multiarray/icx/multiarray_icx.cpp(63,5)
+   <Distributed chunk2>
+      remark #15389: vectorization support: reference phi_28[i][k] has unaligned access   [ ./tmp_multiarray/icx/multiarray_icx.cpp(72,1) ]
+      remark #15389: vectorization support: reference phi_27[i][k] has unaligned access   [ ./tmp_multiarray/icx/multiarray_icx.cpp(73,1) ]
+      remark #15389: vectorization support: reference phi_26[i][k] has unaligned access   [ ./tmp_multiarray/icx/multiarray_icx.cpp(74,1) ]
+      remark #15389: vectorization support: reference phi_25[i][k] has unaligned access   [ ./tmp_multiarray/icx/multiarray_icx.cpp(75,1) ]
+      remark #15389: vectorization support: reference phi_24[i][k] has unaligned access   [ ./tmp_multiarray/icx/multiarray_icx.cpp(76,1) ]
+      remark #15389: vectorization support: reference phi_23[i][k] has unaligned access   [ ./tmp_multiarray/icx/multiarray_icx.cpp(77,1) ]
+      remark #15389: vectorization support: reference phi_22[i][k] has unaligned access   [ ./tmp_multiarray/icx/multiarray_icx.cpp(78,1) ]
+      remark #15389: vectorization support: reference phi_21[i][k] has unaligned access   [ ./tmp_multiarray/icx/multiarray_icx.cpp(79,1) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 0.600
+      remark #15301: PARTIAL LOOP WAS VECTORIZED
+      remark #15451: unmasked unaligned unit stride stores: 8 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 25 
+      remark #15477: vector cost: 10.000 
+      remark #15478: estimated potential speedup: 2.440 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=25
+   LOOP END
+
+   LOOP BEGIN at ./tmp_multiarray/icx/multiarray_icx.cpp(63,5)
+   <Distributed chunk3>
+      remark #15389: vectorization support: reference phi_20[i][k] has unaligned access   [ ./tmp_multiarray/icx/multiarray_icx.cpp(80,1) ]
+      remark #15389: vectorization support: reference phi_19[i][k] has unaligned access   [ ./tmp_multiarray/icx/multiarray_icx.cpp(81,1) ]
+      remark #15389: vectorization support: reference phi_18[i][k] has unaligned access   [ ./tmp_multiarray/icx/multiarray_icx.cpp(82,1) ]
+      remark #15389: vectorization support: reference phi_17[i][k] has unaligned access   [ ./tmp_multiarray/icx/multiarray_icx.cpp(83,1) ]
+      remark #15389: vectorization support: reference phi_16[i][k] has unaligned access   [ ./tmp_multiarray/icx/multiarray_icx.cpp(84,1) ]
+      remark #15389: vectorization support: reference phi_15[i][k] has unaligned access   [ ./tmp_multiarray/icx/multiarray_icx.cpp(85,1) ]
+      remark #15389: vectorization support: reference phi_14[i][k] has unaligned access   [ ./tmp_multiarray/icx/multiarray_icx.cpp(86,1) ]
+      remark #15389: vectorization support: reference phi_13[i][k] has unaligned access   [ ./tmp_multiarray/icx/multiarray_icx.cpp(87,1) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 0.600
+      remark #15301: PARTIAL LOOP WAS VECTORIZED
+      remark #15451: unmasked unaligned unit stride stores: 8 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 25 
+      remark #15477: vector cost: 10.000 
+      remark #15478: estimated potential speedup: 2.440 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=25
+   LOOP END
+
+   LOOP BEGIN at ./tmp_multiarray/icx/multiarray_icx.cpp(63,5)
+   <Distributed chunk4>
+      remark #15389: vectorization support: reference phi_12[i][k] has unaligned access   [ ./tmp_multiarray/icx/multiarray_icx.cpp(88,1) ]
+      remark #15389: vectorization support: reference phi_11[i][k] has unaligned access   [ ./tmp_multiarray/icx/multiarray_icx.cpp(89,1) ]
+      remark #15389: vectorization support: reference phi_10[i][k] has unaligned access   [ ./tmp_multiarray/icx/multiarray_icx.cpp(90,1) ]
+      remark #15389: vectorization support: reference phi_9[i][k] has unaligned access   [ ./tmp_multiarray/icx/multiarray_icx.cpp(91,1) ]
+      remark #15389: vectorization support: reference phi_8[i][k] has unaligned access   [ ./tmp_multiarray/icx/multiarray_icx.cpp(92,1) ]
+      remark #15389: vectorization support: reference phi_7[i][k] has unaligned access   [ ./tmp_multiarray/icx/multiarray_icx.cpp(93,1) ]
+      remark #15389: vectorization support: reference phi_6[i][k] has unaligned access   [ ./tmp_multiarray/icx/multiarray_icx.cpp(94,1) ]
+      remark #15389: vectorization support: reference phi_5[i][k] has unaligned access   [ ./tmp_multiarray/icx/multiarray_icx.cpp(95,1) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 0.600
+      remark #15301: PARTIAL LOOP WAS VECTORIZED
+      remark #15451: unmasked unaligned unit stride stores: 8 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 25 
+      remark #15477: vector cost: 10.000 
+      remark #15478: estimated potential speedup: 2.440 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=25
+   LOOP END
+
+   LOOP BEGIN at ./tmp_multiarray/icx/multiarray_icx.cpp(63,5)
+   <Peeled loop for vectorization, Distributed chunk5>
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at ./tmp_multiarray/icx/multiarray_icx.cpp(63,5)
+   <Distributed chunk5>
+      remark #15389: vectorization support: reference phi_4[i][k] has unaligned access   [ ./tmp_multiarray/icx/multiarray_icx.cpp(96,1) ]
+      remark #15389: vectorization support: reference phi_3[i][k] has unaligned access   [ ./tmp_multiarray/icx/multiarray_icx.cpp(97,1) ]
+      remark #15389: vectorization support: reference phi_2[i][k] has unaligned access   [ ./tmp_multiarray/icx/multiarray_icx.cpp(98,1) ]
+      remark #15388: vectorization support: reference phi_1[i][k] has aligned access   [ ./tmp_multiarray/icx/multiarray_icx.cpp(99,1) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15399: vectorization support: unroll factor set to 4
+      remark #15309: vectorization support: normalized vectorization overhead 0.264
+      remark #15301: PARTIAL LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15451: unmasked unaligned unit stride stores: 3 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 12 
+      remark #15477: vector cost: 4.500 
+      remark #15478: estimated potential speedup: 2.400 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=6
+   LOOP END
+
+   LOOP BEGIN at ./tmp_multiarray/icx/multiarray_icx.cpp(63,5)
+   <Remainder loop for vectorization, Distributed chunk5>
+      remark #15389: vectorization support: reference phi_4[i][k] has unaligned access   [ ./tmp_multiarray/icx/multiarray_icx.cpp(96,1) ]
+      remark #15389: vectorization support: reference phi_3[i][k] has unaligned access   [ ./tmp_multiarray/icx/multiarray_icx.cpp(97,1) ]
+      remark #15389: vectorization support: reference phi_2[i][k] has unaligned access   [ ./tmp_multiarray/icx/multiarray_icx.cpp(98,1) ]
+      remark #15389: vectorization support: reference phi_1[i][k] has unaligned access   [ ./tmp_multiarray/icx/multiarray_icx.cpp(99,1) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 1.100
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+   LOOP END
+
+   LOOP BEGIN at ./tmp_multiarray/icx/multiarray_icx.cpp(63,5)
+   <Remainder loop for vectorization, Distributed chunk5>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at ./tmp_multiarray/icx/multiarray_icx.cpp(102,3)
+<Distributed chunk1>
+   remark #25426: Loop Distributed (6 way) 
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi[i][0]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(104,9) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi[i][99]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(103,9) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_35[i][0]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(106,3) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_35[i][99]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(105,1) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_34[i][0]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(108,3) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_34[i][99]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(107,1) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_33[i][0]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(110,3) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_33[i][99]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(109,1) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_32[i][0]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(112,3) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_32[i][99]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(111,1) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_31[i][0]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(114,3) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_31[i][99]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(113,1) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_30[i][0]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(116,3) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_30[i][99]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(115,1) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_29[i][0]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(118,3) ]
+   remark #15305: vectorization support: vector length 4
+   remark #15427: loop was completely unrolled
+   remark #15462: unmasked indexed (or gather) loads: 15 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 47 
+   remark #15477: vector cost: 75.250 
+   remark #15478: estimated potential speedup: 0.460 
+   remark #15488: --- end vector cost summary ---
+   remark #25436: completely unrolled by 3  
+LOOP END
+
+LOOP BEGIN at ./tmp_multiarray/icx/multiarray_icx.cpp(102,3)
+<Distributed chunk2>
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_29[i][99]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(117,1) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_28[i][0]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(120,3) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_28[i][99]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(119,1) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_27[i][0]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(122,3) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_27[i][99]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(121,1) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_26[i][0]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(124,3) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_26[i][99]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(123,1) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_25[i][0]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(126,3) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_25[i][99]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(125,1) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_24[i][0]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(128,3) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_24[i][99]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(127,1) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_23[i][0]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(130,3) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_23[i][99]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(129,1) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_22[i][0]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(132,3) ]
+   remark #15305: vectorization support: vector length 4
+   remark #15427: loop was completely unrolled
+   remark #15462: unmasked indexed (or gather) loads: 14 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 44 
+   remark #15477: vector cost: 70.250 
+   remark #15478: estimated potential speedup: 0.460 
+   remark #15488: --- end vector cost summary ---
+   remark #25436: completely unrolled by 3  
+LOOP END
+
+LOOP BEGIN at ./tmp_multiarray/icx/multiarray_icx.cpp(102,3)
+<Distributed chunk3>
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_22[i][99]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(131,1) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_21[i][0]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(134,3) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_21[i][99]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(133,1) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_20[i][0]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(136,3) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_20[i][99]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(135,1) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_19[i][0]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(138,3) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_19[i][99]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(137,1) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_18[i][0]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(140,3) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_18[i][99]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(139,1) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_17[i][0]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(142,3) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_17[i][99]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(141,1) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_16[i][0]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(144,3) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_16[i][99]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(143,1) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_15[i][0]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(146,3) ]
+   remark #15305: vectorization support: vector length 4
+   remark #15427: loop was completely unrolled
+   remark #15462: unmasked indexed (or gather) loads: 14 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 44 
+   remark #15477: vector cost: 70.250 
+   remark #15478: estimated potential speedup: 0.460 
+   remark #15488: --- end vector cost summary ---
+   remark #25436: completely unrolled by 3  
+LOOP END
+
+LOOP BEGIN at ./tmp_multiarray/icx/multiarray_icx.cpp(102,3)
+<Distributed chunk4>
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_15[i][99]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(145,1) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_14[i][0]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(148,3) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_14[i][99]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(147,1) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_13[i][0]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(150,3) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_13[i][99]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(149,1) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_12[i][0]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(152,3) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_12[i][99]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(151,1) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_11[i][0]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(154,3) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_11[i][99]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(153,1) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_10[i][0]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(156,3) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_10[i][99]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(155,1) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_9[i][0]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(158,3) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_9[i][99]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(157,1) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_8[i][0]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(160,3) ]
+   remark #15305: vectorization support: vector length 4
+   remark #15427: loop was completely unrolled
+   remark #15462: unmasked indexed (or gather) loads: 14 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 44 
+   remark #15477: vector cost: 70.250 
+   remark #15478: estimated potential speedup: 0.460 
+   remark #15488: --- end vector cost summary ---
+   remark #25436: completely unrolled by 3  
+LOOP END
+
+LOOP BEGIN at ./tmp_multiarray/icx/multiarray_icx.cpp(102,3)
+<Distributed chunk5>
+   remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_8[i][99]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(159,1) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_7[i][0]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(162,3) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_7[i][99]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(161,1) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_6[i][0]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(164,3) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_6[i][99]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(163,1) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_5[i][0]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(166,3) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_5[i][99]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(165,1) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_4[i][0]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(168,3) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_4[i][99]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(167,1) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_3[i][0]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(170,3) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_3[i][99]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(169,1) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_2[i][0]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(172,3) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_2[i][99]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(171,1) ]
+   remark #15416: vectorization support: non-unit strided store was generated for the variable <phi_1[i][0]>, masked, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(174,3) ]
+   remark #15305: vectorization support: vector length 4
+   remark #15427: loop was completely unrolled
+   remark #15462: unmasked indexed (or gather) loads: 14 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 44 
+   remark #15477: vector cost: 70.250 
+   remark #15478: estimated potential speedup: 0.460 
+   remark #15488: --- end vector cost summary ---
+   remark #25436: completely unrolled by 3  
+LOOP END
+
+LOOP BEGIN at ./tmp_multiarray/icx/multiarray_icx.cpp(102,3)
+<Distributed chunk6>
+   remark #15329: vectorization support: non-unit strided store was emulated for the variable <phi_1[i][99]>, stride is 100   [ ./tmp_multiarray/icx/multiarray_icx.cpp(173,1) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15553: loop was not vectorized: number of iterations (3) is insufficient for vectorization
+   remark #15453: unmasked strided stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 3 
+   remark #15477: vector cost: 3.000 
+   remark #15478: estimated potential speedup: 1.000 
+   remark #15488: --- end vector cost summary ---
+   remark #25436: completely unrolled by 3  
+LOOP END
+
+LOOP BEGIN at ./tmp_multiarray/icx/multiarray_icx.cpp(176,3)
+<Distributed chunk1>
+   remark #25426: Loop Distributed (5 way) 
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between phi_1[k] (247:1) and ((phi_1+1600))[k] (248:2)
+   remark #15346: vector dependence: assumed OUTPUT dependence between ((phi_1+1600))[k] (248:2) and phi_1[k] (247:1)
+LOOP END
+
+LOOP BEGIN at ./tmp_multiarray/icx/multiarray_icx.cpp(176,3)
+<Distributed chunk2>
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between phi_9[k] (231:1) and ((phi_9+1600))[k] (232:2)
+   remark #15346: vector dependence: assumed OUTPUT dependence between ((phi_9+1600))[k] (232:2) and phi_9[k] (231:1)
+LOOP END
+
+LOOP BEGIN at ./tmp_multiarray/icx/multiarray_icx.cpp(176,3)
+<Distributed chunk3>
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between phi_17[k] (215:1) and ((phi_17+1600))[k] (216:2)
+   remark #15346: vector dependence: assumed OUTPUT dependence between ((phi_17+1600))[k] (216:2) and phi_17[k] (215:1)
+LOOP END
+
+LOOP BEGIN at ./tmp_multiarray/icx/multiarray_icx.cpp(176,3)
+<Distributed chunk4>
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between phi_25[k] (199:1) and ((phi_25+1600))[k] (200:2)
+   remark #15346: vector dependence: assumed OUTPUT dependence between ((phi_25+1600))[k] (200:2) and phi_25[k] (199:1)
+LOOP END
+
+LOOP BEGIN at ./tmp_multiarray/icx/multiarray_icx.cpp(176,3)
+<Distributed chunk5>
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between phi_33[k] (183:1) and ((phi_33+1600))[k] (184:2)
+   remark #15346: vector dependence: assumed OUTPUT dependence between ((phi_33+1600))[k] (184:2) and phi_33[k] (183:1)
+LOOP END
+
+LOOP BEGIN at ./tmp_multiarray/icx/multiarray_icx.cpp(252,13)
+   remark #15541: outer loop was not auto-vectorized: consider using SIMD directive
+
+   LOOP BEGIN at ./tmp_multiarray/icx/multiarray_icx.cpp(260,5)
+   <Distributed chunk1>
+      remark #25426: Loop Distributed (2 way) 
+      remark #25096: Loop Interchange not done due to: Imperfect Loop Nest (Either at Source or due to other Compiler Transformations)
+      remark #25451: Advice: Loop Interchange, if possible, might help loopnest. Suggested Permutation : ( 1 2 ) --> ( 2 1 ) 
+      remark #15541: outer loop was not auto-vectorized: consider using SIMD directive
+
+      LOOP BEGIN at ./tmp_multiarray/icx/multiarray_icx.cpp(264,11)
+      <Distributed chunk1>
+         remark #25426: Loop Distributed (2 way) 
+         remark #25428: Distributed for large ii at line 264   [ ./tmp_multiarray/icx/multiarray_icx.cpp(264,11) ]
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+         remark #15346: vector dependence: assumed FLOW dependence between ((phi+800))[k] (265:15) and ((phi+800))[k-1] (265:15)
+         remark #15346: vector dependence: assumed ANTI dependence between ((phi+800))[k-1] (265:15) and ((phi+800))[k] (265:15)
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at ./tmp_multiarray/icx/multiarray_icx.cpp(260,5)
+   <Distributed chunk2>
+      remark #25096: Loop Interchange not done due to: Imperfect Loop Nest (Either at Source or due to other Compiler Transformations)
+      remark #25452: Original Order found to be proper, but by a close margin
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed ANTI dependence between dummy (262:17) and dummy (305:7)
+      remark #15346: vector dependence: assumed FLOW dependence between dummy (305:7) and dummy (262:17)
+      remark #15346: vector dependence: assumed FLOW dependence between dummy (305:7) and dummy (262:17)
+      remark #15346: vector dependence: assumed ANTI dependence between dummy (262:17) and dummy (305:7)
+
+      LOOP BEGIN at ./tmp_multiarray/icx/multiarray_icx.cpp(264,11)
+      <Distributed chunk2>
+         remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+         remark #15305: vectorization support: vector length 2
+         remark #15309: vectorization support: normalized vectorization overhead 1.000
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 1 
+         remark #15477: vector cost: 0.500 
+         remark #15478: estimated potential speedup: 1.960 
+         remark #15488: --- end vector cost summary ---
+         remark #25456: Number of Array Refs Scalar Replaced In Loop: 1
+      LOOP END
+   LOOP END
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+./tmp_multiarray/icx/multiarray_icx.cpp(9,33):remark #34051: REGISTER ALLOCATION : [main] ./tmp_multiarray/icx/multiarray_icx.cpp:9
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   63[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm31 k0-k7]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   46[ rax rdx rcx rbx rsi rdi r8-r15 zmm0-zmm31]
+        
+    Routine temporaries
+        Total         :     487
+            Global    :     191
+            Local     :     296
+        Regenerable   :      59
+        Spilled       :      82
+        
+    Routine stack
+        Variables     :      36 bytes*
+            Reads     :       8 [3.43e-03 ~ 0.0%]
+            Writes    :       2 [2.85e-04 ~ 0.0%]
+        Spills        :     616 bytes*
+            Reads     :     271 [9.63e+00 ~ 9.6%]
+            Writes    :      83 [3.88e-02 ~ 0.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: atoi(const char *)
+
+    Report from: Interprocedural optimizations [ipo]
+
+NEVER EMIT DEFINITION FUNCTION: (atoi(const char *))/usr/include/stdlib.h(362,1)
+
+===========================================================================
+
+Begin optimization report for: getTimeStamp()
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (getTimeStamp()) [3/10=30.0%] /home/hpc/muco/muco124h/Bachelor/other/ce_project/dep/timing.cpp(4,1)
+  -> EXTERN: (6,3) clock_gettime(clockid_t, timespec *)
+
+
+    Report from: Code generation optimizations [cg]
+
+/home/hpc/muco/muco124h/Bachelor/other/ce_project/dep/timing.cpp(4,1):remark #34051: REGISTER ALLOCATION : [_Z12getTimeStampv] /home/hpc/muco/muco124h/Bachelor/other/ce_project/dep/timing.cpp:4
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   63[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm31 k0-k7]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :    4[ rsi rdi zmm0-zmm1]
+        
+    Routine temporaries
+        Total         :      13
+            Global    :       6
+            Local     :       7
+        Regenerable   :       3
+        Spilled       :       0
+        
+    Routine stack
+        Variables     :      16 bytes*
+            Reads     :       2 [9.52e+00 ~ 9.5%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+        Spills        :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: getTimeResolution()
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (getTimeResolution()) [4/10=40.0%] /home/hpc/muco/muco124h/Bachelor/other/ce_project/dep/timing.cpp(11,1)
+  -> EXTERN: (13,3) clock_getres(clockid_t, timespec *)
+
+
+    Report from: Code generation optimizations [cg]
+
+/home/hpc/muco/muco124h/Bachelor/other/ce_project/dep/timing.cpp(11,1):remark #34051: REGISTER ALLOCATION : [_Z17getTimeResolutionv] /home/hpc/muco/muco124h/Bachelor/other/ce_project/dep/timing.cpp:11
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   63[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm31 k0-k7]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :    4[ rsi rdi zmm0-zmm1]
+        
+    Routine temporaries
+        Total         :      13
+            Global    :       6
+            Local     :       7
+        Regenerable   :       3
+        Spilled       :       0
+        
+    Routine stack
+        Variables     :      16 bytes*
+            Reads     :       2 [9.52e+00 ~ 9.5%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+        Spills        :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: getTimeStamp_()
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (getTimeStamp_()) [5/10=50.0%] /home/hpc/muco/muco124h/Bachelor/other/ce_project/dep/timing.cpp(18,1)
+  -> INLINE: (19,10) getTimeStamp() (isz = 8) (sz = 13)
+    -> EXTERN: (6,3) clock_gettime(clockid_t, timespec *)
+
+
+    Report from: Code generation optimizations [cg]
+
+/home/hpc/muco/muco124h/Bachelor/other/ce_project/dep/timing.cpp(18,1):remark #34051: REGISTER ALLOCATION : [_Z13getTimeStamp_v] /home/hpc/muco/muco124h/Bachelor/other/ce_project/dep/timing.cpp:18
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   63[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm31 k0-k7]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :    4[ rsi rdi zmm0-zmm1]
+        
+    Routine temporaries
+        Total         :      13
+            Global    :       6
+            Local     :       7
+        Regenerable   :       3
+        Spilled       :       0
+        
+    Routine stack
+        Variables     :      16 bytes*
+            Reads     :       2 [9.52e+00 ~ 9.5%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+        Spills        :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: gettimestamp_()
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (gettimestamp_()) [6/10=60.0%] /home/hpc/muco/muco124h/Bachelor/other/ce_project/dep/timing.cpp(23,1)
+  -> INLINE: (24,10) getTimeStamp() (isz = 8) (sz = 13)
+    -> EXTERN: (6,3) clock_gettime(clockid_t, timespec *)
+
+
+    Report from: Code generation optimizations [cg]
+
+/home/hpc/muco/muco124h/Bachelor/other/ce_project/dep/timing.cpp(23,1):remark #34051: REGISTER ALLOCATION : [_Z13gettimestamp_v] /home/hpc/muco/muco124h/Bachelor/other/ce_project/dep/timing.cpp:23
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   63[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm31 k0-k7]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :    4[ rsi rdi zmm0-zmm1]
+        
+    Routine temporaries
+        Total         :      13
+            Global    :       6
+            Local     :       7
+        Regenerable   :       3
+        Spilled       :       0
+        
+    Routine stack
+        Variables     :      16 bytes*
+            Reads     :       2 [9.52e+00 ~ 9.5%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+        Spills        :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: dummy(double *)
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (dummy(double *)) [7/10=70.0%] /home/hpc/muco/muco124h/Bachelor/other/ce_project/dep/timing.cpp(27,23)
+
+
+    Report from: Code generation optimizations [cg]
+
+/home/hpc/muco/muco124h/Bachelor/other/ce_project/dep/timing.cpp(27,23):remark #34051: REGISTER ALLOCATION : [_Z5dummyPd] /home/hpc/muco/muco124h/Bachelor/other/ce_project/dep/timing.cpp:27
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   63[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm31 k0-k7]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :    1[ rdi]
+        
+    Routine temporaries
+        Total         :       7
+            Global    :       0
+            Local     :       7
+        Regenerable   :       0
+        Spilled       :       0
+        
+    Routine stack
+        Variables     :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+        Spills        :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: perf_event_open(perf_event_attr *, pid_t, int, int, unsigned long)
+
+    Report from: Interprocedural optimizations [ipo]
+
+DEAD STATIC FUNCTION: (perf_event_open(perf_event_attr *, pid_t, int, int, unsigned long)) /home/hpc/muco/muco124h/Bachelor/other/ce_project/dep/perfctr.cpp(10,118)
+
+===========================================================================
+
+Begin optimization report for: perfevent_paranoid_value()
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (perfevent_paranoid_value()) [9/10=90.0%] /home/hpc/muco/muco124h/Bachelor/other/ce_project/dep/perfctr.cpp(36,1)
+  -> EXTERN: (40,10) fopen(const char *, const char *)
+  -> EXTERN: (43,9) __errno_location()
+  -> EXTERN: (44,9) fprintf(FILE *, const char *, ...)
+  -> EXTERN: (44,130) __errno_location()
+  -> EXTERN: (47,19) fread(void *, size_t, size_t, FILE *)
+  -> INLINE (MANUAL): (50,20) atoi(const char *) (isz = 7) (sz = 14)
+    -> EXTERN: /usr/include/stdlib.h:(363,16) strtol(const char *, char **, int)
+  -> EXTERN: (52,5) fclose(FILE *)
+
+
+    Report from: Code generation optimizations [cg]
+
+/home/hpc/muco/muco124h/Bachelor/other/ce_project/dep/perfctr.cpp(36,1):remark #34051: REGISTER ALLOCATION : [_Z24perfevent_paranoid_valuev] /home/hpc/muco/muco124h/Bachelor/other/ce_project/dep/perfctr.cpp:36
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   63[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm31 k0-k7]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :    7[ rax rdx rcx rbx rbp rsi rdi]
+        
+    Routine temporaries
+        Total         :      39
+            Global    :      16
+            Local     :      23
+        Regenerable   :      15
+        Spilled       :       2
+        
+    Routine stack
+        Variables     :     100 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+        Spills        :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: init_perf_event(perf_event_attr *)
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (init_perf_event(perf_event_attr *)) [10/10=100.0%] /home/hpc/muco/muco124h/Bachelor/other/ce_project/dep/perfctr.cpp(19,1)
+  -> EXTERN: (20,5) memset(void *, int, size_t)
+  -> INLINE: (27,19) perf_event_open(perf_event_attr *, pid_t, int, int, unsigned long) (isz = 4) (sz = 19)
+    -> EXTERN: (13,11) syscall(long, ...)
+  -> EXTERN: (29,9) fprintf(FILE *, const char *, ...)
+  -> EXTERN: (30,9) exit(int)
+
+
+    Report from: Code generation optimizations [cg]
+
+/home/hpc/muco/muco124h/Bachelor/other/ce_project/dep/perfctr.cpp(19,1):remark #34051: REGISTER ALLOCATION : [_Z15init_perf_eventP15perf_event_attr] /home/hpc/muco/muco124h/Bachelor/other/ce_project/dep/perfctr.cpp:19
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   63[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm31 k0-k7]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :    8[ rax rdx rcx rsi rdi r8-r9 r15]
+        
+    Routine temporaries
+        Total         :      29
+            Global    :      10
+            Local     :      19
+        Regenerable   :      12
+        Spilled       :       1
+        
+    Routine stack
+        Variables     :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+        Spills        :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================

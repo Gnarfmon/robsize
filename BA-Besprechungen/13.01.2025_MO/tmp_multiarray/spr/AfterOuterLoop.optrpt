@@ -1,0 +1,91 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) C Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.10.0 Build 20230609_000000
+
+Compiler options: -Wl,-rpath,/apps/SPACK/0.19.1/opt/linux-almalinux8-icelake/gcc-8.5.0/intel-oneapi-compilers-2023.2.1-axze7ocbc5zpklxb6kr5h2d5hbpf2lxk/compiler/2023.2.1/linux/lib -Wl,-rpath,/apps/SPACK/0.19.1/opt/linux-almalinux8-icelake/gcc-8.5.0/intel-oneapi-compilers-2023.2.1-axze7ocbc5zpklxb6kr5h2d5hbpf2lxk/compiler/2023.2.1/linux/lib/x64 -Wl,-rpath,/apps/SPACK/0.19.1/opt/linux-almalinux8-icelake/gcc-8.5.0/intel-oneapi-compilers-2023.2.1-axze7ocbc5zpklxb6kr5h2d5hbpf2lxk/compiler/2023.2.1/linux/lib/oclfpga/host/linux64/lib -Wl,-rpath,/apps/SPACK/0.19.1/opt/linux-almalinux8-icelake/gcc-8.5.0/intel-oneapi-compilers-2023.2.1-axze7ocbc5zpklxb6kr5h2d5hbpf2lxk/compiler/2023.2.1/linux/lib/oclfpga/linux64/lib -Wl,-rpath,/apps/SPACK/0.19.1/opt/linux-almalinux8-icelake/gcc-8.5.0/intel-oneapi-compilers-2023.2.1-axze7ocbc5zpklxb6kr5h2d5hbpf2lxk/compiler/2023.2.1/linux/compiler/lib/intel64_lin -gcc-name=/usr/bin/gcc -gxx-name=/usr/bin/g++ -Ofast -qopenmp-simd -xHost -qopt-zmm-usage=low -fargument-noalias -funroll-loops -fno-builtin -diag-disable=all -qopt-report=5 -qopt-report-phase=loop -S -o AfterLoop.s
+
+Begin optimization report for: main(int, char **)
+
+    Report from: Loop nest optimizations [loop]
+
+
+LOOP BEGIN at multiarray_spr.cpp(56,3)
+   remark #25460: No loop optimizations reported
+
+   LOOP BEGIN at multiarray_spr.cpp(57,5)
+      remark #25460: No loop optimizations reported
+      remark #25015: Estimate of max trip count of loop=25
+   LOOP END
+LOOP END
+
+LOOP BEGIN at multiarray_spr.cpp(90,3)
+<Distributed chunk1>
+   remark #25426: Loop Distributed (5 way) 
+   remark #25436: completely unrolled by 3  
+LOOP END
+
+LOOP BEGIN at multiarray_spr.cpp(90,3)
+<Distributed chunk2>
+   remark #25436: completely unrolled by 3  
+LOOP END
+
+LOOP BEGIN at multiarray_spr.cpp(90,3)
+<Distributed chunk3>
+   remark #25436: completely unrolled by 3  
+LOOP END
+
+LOOP BEGIN at multiarray_spr.cpp(90,3)
+<Distributed chunk4>
+   remark #25436: completely unrolled by 3  
+LOOP END
+
+LOOP BEGIN at multiarray_spr.cpp(90,3)
+<Distributed chunk5>
+   remark #25436: completely unrolled by 3  
+LOOP END
+
+LOOP BEGIN at multiarray_spr.cpp(152,3)
+<Distributed chunk1>
+   remark #25426: Loop Distributed (4 way) 
+LOOP END
+
+LOOP BEGIN at multiarray_spr.cpp(152,3)
+<Distributed chunk2>
+LOOP END
+
+LOOP BEGIN at multiarray_spr.cpp(152,3)
+<Distributed chunk3>
+LOOP END
+
+LOOP BEGIN at multiarray_spr.cpp(152,3)
+<Distributed chunk4>
+LOOP END
+
+LOOP BEGIN at multiarray_spr.cpp(216,13)
+   remark #25460: No loop optimizations reported
+
+   LOOP BEGIN at multiarray_spr.cpp(222,5)
+   <Distributed chunk1>
+      remark #25426: Loop Distributed (2 way) 
+      remark #25428: Distributed for large ii at line 222   [ multiarray_spr.cpp(222,5) ]
+      remark #25096: Loop Interchange not done due to: Imperfect Loop Nest (Either at Source or due to other Compiler Transformations)
+      remark #25451: Advice: Loop Interchange, if possible, might help loopnest. Suggested Permutation : ( 1 2 ) --> ( 2 1 ) 
+
+      LOOP BEGIN at multiarray_spr.cpp(226,11)
+      <Distributed chunk1>
+         remark #25426: Loop Distributed (2 way) 
+      LOOP END
+
+      LOOP BEGIN at multiarray_spr.cpp(226,11)
+      <Distributed chunk2>
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at multiarray_spr.cpp(222,5)
+   <Distributed chunk2>
+      remark #25456: Number of Array Refs Scalar Replaced In Loop: 1
+   LOOP END
+LOOP END
+===========================================================================
