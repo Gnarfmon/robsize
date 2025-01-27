@@ -1,0 +1,185 @@
+Target micro-architecture is: Sapphire Rapids (run maqao --list-procs to review related processors).
+
+Section 1: Function: main
+=========================
+
+Found no debug data for this function.
+Without them, cannot print source file/lines and customize reports for used compiler/language.
+With GNU, LLVM or Intel compilers, please recompile with -g.
+With an Intel compiler you must explicitly specify an optimization level and you can use -sox compilation flag to allow CQA to retrieve more information on used flags.
+With the clang compiler use -grecord-gcc-switches for flags recording.
+Alternatively, try to:
+ - recompile with -debug noinline-debug-info (if using Intel compiler 13)
+ - analyze the caller function (possible inlining)
+
+Section 1.1: Binary loops in the function named main
+====================================================
+
+Section 1.1.1: Binary loop #3
+=============================
+
+
+6% of peak computational performance is used (2.00 out of 32.00 FLOP per cycle (GFLOPS @ 1GHz))
+
+Vectorization
+-------------
+Your loop is not vectorized.
+8 data elements could be processed at once in vector registers.
+By vectorizing your loop, you can lower the cost of an iteration from 2.00 to 0.25 cycles (8.00x speedup).
+All SSE/AVX instructions are used in scalar version (process only one data element in vector registers).
+Since your execution units are vector units, only a vectorized loop can use their full power.
+
+Workaround(s):
+ - Try another compiler or update/tune your current one
+ - Remove inter-iterations dependences from your loop and make it unit-stride:
+  * If your arrays have 2 or more dimensions, check whether elements are accessed contiguously and, otherwise, try to permute loops accordingly
+  * If your loop streams arrays of structures (AoS), try to use structures of arrays instead (SoA)
+
+
+Execution units bottlenecks
+---------------------------
+Performance is limited by execution of FP multiply or FMA (fused multiply-add) operations (the FP multiply/FMA unit is a bottleneck).
+
+By removing all these bottlenecks, you can lower the cost of an iteration from 2.00 to 1.83 cycles (1.09x speedup).
+
+Workaround(s):
+Reduce the number of FP multiply/FMA instructions
+
+FMA
+---
+Presence of both ADD/SUB and MUL operations.
+Workaround(s):
+ - Pass to your compiler a micro-architecture specialization option:
+  * Please look into your compiler manual for march=native or equivalent
+ - Try to change order in which elements are evaluated (using parentheses) in arithmetic expressions containing both ADD/SUB and MUL operations to enable your compiler to generate FMA instructions wherever possible.
+For instance a + b*c is a valid FMA (MUL then ADD).
+However (a+b)* c cannot be translated into an FMA (ADD then MUL).
+
+
+Type of elements and instruction set
+------------------------------------
+4 SSE or AVX instructions are processing arithmetic or math operations on double precision FP elements in scalar mode (one at a time).
+
+
+Matching between your loop (in the source code) and the binary loop
+-------------------------------------------------------------------
+The binary loop is composed of 4 FP arithmetical operations:
+ - 3: addition or subtraction
+ - 1: multiply
+The binary loop is loading 32 bytes (4 double precision FP elements).
+The binary loop is storing 8 bytes (1 double precision FP elements).
+
+Arithmetic intensity
+--------------------
+Arithmetic intensity is 0.10 FP operations per loaded or stored byte.
+
+General properties
+------------------
+nb instructions    : 9
+nb uops            : 8
+loop length        : 60
+used x86 registers : 2
+used mmx registers : 0
+used xmm registers : 6
+used ymm registers : 0
+used zmm registers : 0
+nb stack references: 0
+ADD-SUB / MUL ratio: 3.00
+
+
+Front-end
+---------
+ASSUMED MACRO FUSION
+FIT IN UOP CACHE
+micro-operation queue: 1.83 cycles
+front end            : 1.83 cycles
+
+
+Back-end
+--------
+       | P0   | P1   | P2   | P3   | P4   | P5   | P6   | P7   | P8   | P9   | P10  | P11
+------------------------------------------------------------------------------------------
+uops   | 1.00 | 1.50 | 1.33 | 1.33 | 0.50 | 1.50 | 1.00 | 0.50 | 0.50 | 0.50 | 0.00 | 1.33
+cycles | 1.00 | 2.00 | 1.33 | 1.33 | 0.50 | 1.50 | 1.00 | 0.50 | 0.50 | 0.50 | 0.00 | 1.33
+
+Execution ports to units layout:
+ - P0 (256 bits): VPU, BRU, ALU, DIV/SQRT
+ - P1 (256 bits): ALU, VPU
+ - P2 (512 bits): load
+ - P3 (512 bits): load
+ - P4 (512 bits): store data
+ - P5 (512 bits): ALU, VPU
+ - P6: ALU, BRU
+ - P7: store address
+ - P8: store address
+ - P9 (512 bits): store data
+ - P10: ALU
+ - P11 (512 bits): load
+
+Cycles executing div or sqrt instructions: NA
+Longest recurrence chain latency (RecMII): 1.00
+
+
+Cycles summary
+--------------
+Front-end : 1.83
+Dispatch  : 2.00
+Data deps.: 1.00
+Overall L1: 2.00
+
+
+Vectorization ratios
+--------------------
+all     : 0%
+load    : 0%
+store   : 0%
+mul     : 0%
+add-sub : 0%
+fma     : NA (no fma vectorizable/vectorized instructions)
+div/sqrt: NA (no div/sqrt vectorizable/vectorized instructions)
+other   : NA (no other vectorizable/vectorized instructions)
+
+
+Vector efficiency ratios
+------------------------
+all     : 12%
+load    : 12%
+store   : 12%
+mul     : 12%
+add-sub : 12%
+fma     : NA (no fma vectorizable/vectorized instructions)
+div/sqrt: NA (no div/sqrt vectorizable/vectorized instructions)
+other   : NA (no other vectorizable/vectorized instructions)
+
+
+Cycles and memory resources usage
+---------------------------------
+Assuming all data fit into the L1 cache, each iteration of the binary loop takes 2.00 cycles. At this rate:
+ - 8% of peak load performance is reached (16.00 out of 192.00 bytes loaded per cycle (GB/s @ 1GHz))
+ - 3% of peak store performance is reached (4.00 out of 128.00 bytes stored per cycle (GB/s @ 1GHz))
+
+
+Front-end bottlenecks
+---------------------
+Found no such bottlenecks.
+
+ASM code
+--------
+In the binary file, the address of the loop is: 401591
+
+Instruction                           | Nb FU | P0   | P1   | P2   | P3   | P4   | P5   | P6   | P7   | P8   | P9   | P10  | P11  | Latency | Recip. throughput | Vectorization
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+VMOVSD 0x320(%R15,%RCX,8),%XMM1       | 1     | 0    | 0    | 0.33 | 0.33 | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 0.33 | 1       | 0.33              | scal (12.5%)
+VADDSD 0x648(%R15,%RCX,8),%XMM1,%XMM2 | 1     | 0    | 0.50 | 0.33 | 0.33 | 0    | 0.50 | 0    | 0    | 0    | 0    | 0    | 0.33 | 3       | 0.50              | scal (12.5%)
+VADDSD 0x330(%R15,%RCX,8),%XMM2,%XMM3 | 1     | 0    | 0.50 | 0.33 | 0.33 | 0    | 0.50 | 0    | 0    | 0    | 0    | 0    | 0.33 | 3       | 0.50              | scal (12.5%)
+VADDSD 0x8(%R15,%RCX,8),%XMM3,%XMM4   | 1     | 0    | 0.50 | 0.33 | 0.33 | 0    | 0.50 | 0    | 0    | 0    | 0    | 0    | 0.33 | 3       | 0.50              | scal (12.5%)
+VMULSD %XMM4,%XMM0,%XMM5              | 1     | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 4       | 0.50              | scal (12.5%)
+VMOVSD %XMM5,0x328(%R15,%RCX,8)       | 1     | 0    | 0    | 0    | 0    | 0.50 | 0    | 0    | 0.50 | 0.50 | 0.50 | 0    | 0    | 1       | 0.50              | scal (12.5%)
+INC %RCX                              | 1     | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 1       | 0.17              | N/A
+CMP $0x62,%RCX                        | 1     | 0.20 | 0.20 | 0    | 0    | 0    | 0.20 | 0.20 | 0    | 0    | 0    | 0.20 | 0    | 1       | 0.20              | N/A
+JB 401591 <main+0x321>                | 1     | 0.50 | 0    | 0    | 0    | 0    | 0    | 0.50 | 0    | 0    | 0    | 0    | 0    | 0       | 0.50              | N/A
+
+
+
+All innermost loops were analyzed.
+
